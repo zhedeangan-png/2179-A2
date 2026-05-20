@@ -1,0 +1,104 @@
+{
+  "title": "Service frequency by line",
+  "width": 320,
+  "height": 510,
+  "data": {
+    "url": "data/frequency_summary_by_line.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.service_id == 'MonFri'"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 4
+  },
+  "encoding": {
+    "x": {
+      "field": "avg_headway_min",
+      "type": "quantitative",
+      "title": "Average headway, minutes"
+    },
+    "y": {
+      "field": "route_long_name",
+      "type": "nominal",
+      "sort": "x",
+      "title": null
+    },
+    "color": {
+      "field": "route_long_name",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "LRT Ampang Line",
+          "LRT Kelana Jaya Line",
+          "LRT Sri Petaling Line",
+          "MRT Kajang Line",
+          "MRT Putrajaya Line",
+          "KL Monorail Line",
+          "BRT Sunway Line"
+        ],
+        "range": [
+          "#E69F00",
+          "#0072B2",
+          "#D55E00",
+          "#009E73",
+          "#CC79A7",
+          "#6A3D9A",
+          "#56B4E9"
+        ]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "route_long_name",
+        "type": "nominal",
+        "title": "Line"
+      },
+      {
+        "field": "avg_headway_min",
+        "type": "quantitative",
+        "title": "Avg headway (min)"
+      },
+      {
+        "field": "min_headway_min",
+        "type": "quantitative",
+        "title": "Min headway (min)"
+      },
+      {
+        "field": "max_headway_min",
+        "type": "quantitative",
+        "title": "Max headway (min)"
+      }
+    ]
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Inter, Arial, sans-serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937"
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151",
+      "gridColor": "#e5e7eb"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "orient": "bottom"
+    },
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

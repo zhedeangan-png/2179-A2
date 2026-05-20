@@ -1,0 +1,94 @@
+{
+  "title": "Monthly average daily ridership by line",
+  "width": 760,
+  "height": 380,
+  "data": {
+    "url": "data/line_ridership_monthly.csv"
+  },
+  "mark": {
+    "type": "line",
+    "point": false,
+    "strokeWidth": 2.5
+  },
+  "encoding": {
+    "x": {
+      "field": "year_month",
+      "type": "temporal",
+      "title": "Month"
+    },
+    "y": {
+      "field": "avg_daily_ridership",
+      "type": "quantitative",
+      "title": "Average daily ridership"
+    },
+    "color": {
+      "field": "line",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "LRT Ampang/Sri Petaling",
+          "LRT Kelana Jaya",
+          "MRT Kajang",
+          "MRT Putrajaya",
+          "KL Monorail",
+          "BRT Sunway"
+        ],
+        "range": [
+          "#E69F00",
+          "#0072B2",
+          "#009E73",
+          "#CC79A7",
+          "#6A3D9A",
+          "#56B4E9"
+        ]
+      },
+      "title": "Line"
+    },
+    "tooltip": [
+      {
+        "field": "year_month",
+        "type": "temporal",
+        "title": "Month",
+        "format": "%b %Y"
+      },
+      {
+        "field": "line",
+        "type": "nominal",
+        "title": "Line"
+      },
+      {
+        "field": "avg_daily_ridership",
+        "type": "quantitative",
+        "title": "Avg daily riders",
+        "format": ","
+      }
+    ]
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Inter, Arial, sans-serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937"
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151",
+      "gridColor": "#e5e7eb"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "orient": "bottom"
+    },
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

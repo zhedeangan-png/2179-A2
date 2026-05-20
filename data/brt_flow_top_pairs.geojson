@@ -1,0 +1,465 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "SunU-Monash",
+        "destination_stop": "USJ 7",
+        "total_ridership": 194071,
+        "avg_daily_ridership": 1481.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.6016,
+            3.0654
+          ],
+          [
+            101.5919,
+            3.0553
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "SunMed",
+        "destination_stop": "USJ 7",
+        "total_ridership": 178785,
+        "avg_daily_ridership": 1365.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.6087,
+            3.0656
+          ],
+          [
+            101.5919,
+            3.0553
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "USJ 7",
+        "destination_stop": "SunU-Monash",
+        "total_ridership": 178652,
+        "avg_daily_ridership": 1364.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.5919,
+            3.0553
+          ],
+          [
+            101.6016,
+            3.0654
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "USJ 7",
+        "destination_stop": "Sunway Lagoon",
+        "total_ridership": 173805,
+        "avg_daily_ridership": 1327.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.5919,
+            3.0553
+          ],
+          [
+            101.6107,
+            3.0706
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "Sunway Lagoon",
+        "destination_stop": "USJ 7",
+        "total_ridership": 169854,
+        "avg_daily_ridership": 1297.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.6107,
+            3.0706
+          ],
+          [
+            101.5919,
+            3.0553
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "USJ 7",
+        "destination_stop": "SunMed",
+        "total_ridership": 167250,
+        "avg_daily_ridership": 1277.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.5919,
+            3.0553
+          ],
+          [
+            101.6087,
+            3.0656
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "South Quay-USJ 1",
+        "destination_stop": "USJ 7",
+        "total_ridership": 125744,
+        "avg_daily_ridership": 960.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.5969,
+            3.0617
+          ],
+          [
+            101.5919,
+            3.0553
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "USJ 7",
+        "destination_stop": "South Quay-USJ 1",
+        "total_ridership": 125141,
+        "avg_daily_ridership": 955.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.5919,
+            3.0553
+          ],
+          [
+            101.5969,
+            3.0617
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "South Quay-USJ 1",
+        "destination_stop": "SunU-Monash",
+        "total_ridership": 85661,
+        "avg_daily_ridership": 654.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.5969,
+            3.0617
+          ],
+          [
+            101.6016,
+            3.0654
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "SunMed",
+        "destination_stop": "Sunway Lagoon",
+        "total_ridership": 83534,
+        "avg_daily_ridership": 638.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.6087,
+            3.0656
+          ],
+          [
+            101.6107,
+            3.0706
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "SunU-Monash",
+        "destination_stop": "South Quay-USJ 1",
+        "total_ridership": 75924,
+        "avg_daily_ridership": 580.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.6016,
+            3.0654
+          ],
+          [
+            101.5969,
+            3.0617
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "Sunway Lagoon",
+        "destination_stop": "SunMed",
+        "total_ridership": 74945,
+        "avg_daily_ridership": 572.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.6107,
+            3.0706
+          ],
+          [
+            101.6087,
+            3.0656
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "SunMed",
+        "destination_stop": "South Quay-USJ 1",
+        "total_ridership": 63607,
+        "avg_daily_ridership": 486.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.6087,
+            3.0656
+          ],
+          [
+            101.5969,
+            3.0617
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "South Quay-USJ 1",
+        "destination_stop": "SunMed",
+        "total_ridership": 63539,
+        "avg_daily_ridership": 485.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.5969,
+            3.0617
+          ],
+          [
+            101.6087,
+            3.0656
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "SunMed",
+        "destination_stop": "SunU-Monash",
+        "total_ridership": 58680,
+        "avg_daily_ridership": 448.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.6087,
+            3.0656
+          ],
+          [
+            101.6016,
+            3.0654
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "Sunway-Setia Jaya",
+        "destination_stop": "USJ 7",
+        "total_ridership": 54819,
+        "avg_daily_ridership": 418.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.6123,
+            3.0828
+          ],
+          [
+            101.5919,
+            3.0553
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "SunU-Monash",
+        "destination_stop": "SunMed",
+        "total_ridership": 52076,
+        "avg_daily_ridership": 398.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.6016,
+            3.0654
+          ],
+          [
+            101.6087,
+            3.0656
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "USJ 7",
+        "destination_stop": "Sunway-Setia Jaya",
+        "total_ridership": 49194,
+        "avg_daily_ridership": 376.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.5919,
+            3.0553
+          ],
+          [
+            101.6123,
+            3.0828
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "USJ 7",
+        "destination_stop": "Mentari",
+        "total_ridership": 48408,
+        "avg_daily_ridership": 370.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.5919,
+            3.0553
+          ],
+          [
+            101.6101,
+            3.0761
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "origin_stop": "SunMed",
+        "destination_stop": "Mentari",
+        "total_ridership": 45466,
+        "avg_daily_ridership": 347.0,
+        "days_observed": 131
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            101.6087,
+            3.0656
+          ],
+          [
+            101.6101,
+            3.0761
+          ]
+        ]
+      }
+    }
+  ]
+}

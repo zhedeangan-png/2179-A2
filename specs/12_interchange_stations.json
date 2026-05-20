@@ -1,0 +1,497 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Interchange stations by connected line",
+    "subtitle": "Each dot shows a line that connects at the station."
+  },
+  "width": 460,
+  "height": 390,
+  "padding": {
+    "left": 5,
+    "right": 5,
+    "top": 5,
+    "bottom": 5
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/interchange_stations.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.route_count >= 2 && indexof(datum.lines, 'AGL') >= 0"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 85,
+        "filled": true,
+        "color": "#E69F00",
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "x": {
+          "datum": "LRT Ampang",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "LRT Ampang",
+              "LRT Sri Petaling",
+              "LRT Kelana Jaya",
+              "MRT Kajang",
+              "MRT Putrajaya",
+              "KL Monorail",
+              "BRT Sunway"
+            ]
+          },
+          "axis": {
+            "labelAngle": -35,
+            "labelLimit": 90
+          }
+        },
+        "y": {
+          "field": "station_name",
+          "type": "nominal",
+          "sort": {
+            "field": "route_count",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null,
+          "axis": {
+            "labelLimit": 105
+          }
+        },
+        "tooltip": [
+          {
+            "field": "station_name",
+            "type": "nominal",
+            "title": "Station"
+          },
+          {
+            "datum": "LRT Ampang Line",
+            "type": "nominal",
+            "title": "Connected line"
+          },
+          {
+            "field": "route_count",
+            "type": "quantitative",
+            "title": "Connected lines"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/interchange_stations.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.route_count >= 2 && indexof(datum.lines, 'SPL') >= 0"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 85,
+        "filled": true,
+        "color": "#D55E00",
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "x": {
+          "datum": "LRT Sri Petaling",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "LRT Ampang",
+              "LRT Sri Petaling",
+              "LRT Kelana Jaya",
+              "MRT Kajang",
+              "MRT Putrajaya",
+              "KL Monorail",
+              "BRT Sunway"
+            ]
+          }
+        },
+        "y": {
+          "field": "station_name",
+          "type": "nominal",
+          "sort": {
+            "field": "route_count",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null
+        },
+        "tooltip": [
+          {
+            "field": "station_name",
+            "type": "nominal",
+            "title": "Station"
+          },
+          {
+            "datum": "LRT Sri Petaling Line",
+            "type": "nominal",
+            "title": "Connected line"
+          },
+          {
+            "field": "route_count",
+            "type": "quantitative",
+            "title": "Connected lines"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/interchange_stations.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.route_count >= 2 && indexof(datum.lines, 'KJL') >= 0"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 85,
+        "filled": true,
+        "color": "#0072B2",
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "x": {
+          "datum": "LRT Kelana Jaya",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "LRT Ampang",
+              "LRT Sri Petaling",
+              "LRT Kelana Jaya",
+              "MRT Kajang",
+              "MRT Putrajaya",
+              "KL Monorail",
+              "BRT Sunway"
+            ]
+          }
+        },
+        "y": {
+          "field": "station_name",
+          "type": "nominal",
+          "sort": {
+            "field": "route_count",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null
+        },
+        "tooltip": [
+          {
+            "field": "station_name",
+            "type": "nominal",
+            "title": "Station"
+          },
+          {
+            "datum": "LRT Kelana Jaya Line",
+            "type": "nominal",
+            "title": "Connected line"
+          },
+          {
+            "field": "route_count",
+            "type": "quantitative",
+            "title": "Connected lines"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/interchange_stations.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.route_count >= 2 && indexof(datum.lines, 'KGL') >= 0"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 85,
+        "filled": true,
+        "color": "#009E73",
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "x": {
+          "datum": "MRT Kajang",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "LRT Ampang",
+              "LRT Sri Petaling",
+              "LRT Kelana Jaya",
+              "MRT Kajang",
+              "MRT Putrajaya",
+              "KL Monorail",
+              "BRT Sunway"
+            ]
+          }
+        },
+        "y": {
+          "field": "station_name",
+          "type": "nominal",
+          "sort": {
+            "field": "route_count",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null
+        },
+        "tooltip": [
+          {
+            "field": "station_name",
+            "type": "nominal",
+            "title": "Station"
+          },
+          {
+            "datum": "MRT Kajang Line",
+            "type": "nominal",
+            "title": "Connected line"
+          },
+          {
+            "field": "route_count",
+            "type": "quantitative",
+            "title": "Connected lines"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/interchange_stations.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.route_count >= 2 && indexof(datum.lines, 'PYL') >= 0"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 85,
+        "filled": true,
+        "color": "#CC79A7",
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "x": {
+          "datum": "MRT Putrajaya",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "LRT Ampang",
+              "LRT Sri Petaling",
+              "LRT Kelana Jaya",
+              "MRT Kajang",
+              "MRT Putrajaya",
+              "KL Monorail",
+              "BRT Sunway"
+            ]
+          }
+        },
+        "y": {
+          "field": "station_name",
+          "type": "nominal",
+          "sort": {
+            "field": "route_count",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null
+        },
+        "tooltip": [
+          {
+            "field": "station_name",
+            "type": "nominal",
+            "title": "Station"
+          },
+          {
+            "datum": "MRT Putrajaya Line",
+            "type": "nominal",
+            "title": "Connected line"
+          },
+          {
+            "field": "route_count",
+            "type": "quantitative",
+            "title": "Connected lines"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/interchange_stations.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.route_count >= 2 && indexof(datum.lines, 'MRL') >= 0"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 85,
+        "filled": true,
+        "color": "#6A3D9A",
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "x": {
+          "datum": "KL Monorail",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "LRT Ampang",
+              "LRT Sri Petaling",
+              "LRT Kelana Jaya",
+              "MRT Kajang",
+              "MRT Putrajaya",
+              "KL Monorail",
+              "BRT Sunway"
+            ]
+          }
+        },
+        "y": {
+          "field": "station_name",
+          "type": "nominal",
+          "sort": {
+            "field": "route_count",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null
+        },
+        "tooltip": [
+          {
+            "field": "station_name",
+            "type": "nominal",
+            "title": "Station"
+          },
+          {
+            "datum": "KL Monorail Line",
+            "type": "nominal",
+            "title": "Connected line"
+          },
+          {
+            "field": "route_count",
+            "type": "quantitative",
+            "title": "Connected lines"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/interchange_stations.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.route_count >= 2 && indexof(datum.lines, 'BRT') >= 0"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 85,
+        "filled": true,
+        "color": "#56B4E9",
+        "stroke": "white",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "x": {
+          "datum": "BRT Sunway",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "LRT Ampang",
+              "LRT Sri Petaling",
+              "LRT Kelana Jaya",
+              "MRT Kajang",
+              "MRT Putrajaya",
+              "KL Monorail",
+              "BRT Sunway"
+            ]
+          }
+        },
+        "y": {
+          "field": "station_name",
+          "type": "nominal",
+          "sort": {
+            "field": "route_count",
+            "op": "max",
+            "order": "descending"
+          },
+          "title": null
+        },
+        "tooltip": [
+          {
+            "field": "station_name",
+            "type": "nominal",
+            "title": "Station"
+          },
+          {
+            "datum": "BRT Sunway Line",
+            "type": "nominal",
+            "title": "Connected line"
+          },
+          {
+            "field": "route_count",
+            "type": "quantitative",
+            "title": "Connected lines"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Georgia, 'Times New Roman', serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937",
+      "subtitleFont": "Inter, Arial, sans-serif",
+      "subtitleFontSize": 12,
+      "subtitleColor": "#64748b"
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 10,
+      "labelColor": "#334155",
+      "grid": true,
+      "gridColor": "#f1f5f9",
+      "domain": false,
+      "ticks": false
+    },
+    "legend": null,
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

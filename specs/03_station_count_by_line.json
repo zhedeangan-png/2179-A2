@@ -1,0 +1,136 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Number of stations by line",
+    "subtitle": "Longer bars indicate wider station coverage."
+  },
+  "width": 460,
+  "height": 330,
+  "padding": {
+    "left": 5,
+    "right": 25,
+    "top": 5,
+    "bottom": 5
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "data": {
+    "url": "data/station_counts_by_line.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 4
+      },
+      "encoding": {
+        "x": {
+          "field": "station_count",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "grid": true,
+            "tickCount": 6
+          }
+        },
+        "y": {
+          "field": "route_long_name",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null,
+          "axis": {
+            "labelLimit": 150
+          }
+        },
+        "color": {
+          "field": "route_long_name",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "LRT Ampang Line",
+              "LRT Kelana Jaya Line",
+              "LRT Sri Petaling Line",
+              "MRT Kajang Line",
+              "MRT Putrajaya Line",
+              "KL Monorail Line",
+              "BRT Sunway Line"
+            ],
+            "range": [
+              "#E69F00",
+              "#0072B2",
+              "#D55E00",
+              "#009E73",
+              "#CC79A7",
+              "#6A3D9A",
+              "#56B4E9"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "route_long_name",
+            "type": "nominal",
+            "title": "Line"
+          },
+          {
+            "field": "station_count",
+            "type": "quantitative",
+            "title": "Stations"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#334155"
+      },
+      "encoding": {
+        "x": {
+          "field": "station_count",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "route_long_name",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "text": {
+          "field": "station_count",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Georgia, 'Times New Roman', serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937",
+      "subtitleFont": "Inter, Arial, sans-serif",
+      "subtitleFontSize": 12,
+      "subtitleColor": "#64748b"
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#334155",
+      "gridColor": "#e5e7eb"
+    },
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

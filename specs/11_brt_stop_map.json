@@ -1,0 +1,88 @@
+{
+  "title": "BRT Sunway stops form a compact local corridor",
+  "width": 520,
+  "height": 360,
+  "projection": {
+    "type": "mercator",
+    "center": [
+      101.602,
+      3.069
+    ],
+    "scale": 190000
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/routes_direction0.geojson"
+      },
+      "transform": [
+        {
+          "filter": "datum.properties.route_long_name == 'BRT Sunway Line'"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#56B4E9",
+        "strokeWidth": 4
+      }
+    },
+    {
+      "data": {
+        "url": "data/brt_stops.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "size": 120,
+        "filled": true,
+        "color": "#56B4E9",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "longitude": {
+          "field": "stop_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "stop_lat",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "station_name",
+            "type": "nominal",
+            "title": "BRT stop"
+          }
+        ]
+      }
+    }
+  ],
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Inter, Arial, sans-serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937"
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151",
+      "gridColor": "#e5e7eb"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "orient": "bottom"
+    },
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

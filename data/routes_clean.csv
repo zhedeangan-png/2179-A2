@@ -1,0 +1,8 @@
+route_id,route_short_name,route_long_name,route_desc,category,route_color_hex,route_text_color_hex
+AG,AGL,LRT Ampang Line,Ampang ~ Sentul Timur,LRT,#e57200,#FFFFFF
+KJ,KJL,LRT Kelana Jaya Line,Gombak ~ Putra Heights,LRT,#D50032,#FFFFFF
+PH,SPL,LRT Sri Petaling Line,Putra Height ~ Sentul Timur,LRT,#76232f,#FFFFFF
+KGL,KGL,MRT Kajang Line,Kwasa Damansara ~ Kajang,MRT,#047940,#FFFFFF
+PYL,PYL,MRT Putrajaya Line,Putrajaya ~ Kwasa Damansara,MRT,#FFCD00,#FFFFFF
+MR,MRL,KL Monorail Line,Titiwangsa ~ KL Sentral,MRL,#84bd00,#FFFFFF
+BRT,BRT,BRT Sunway Line,Sunway-Setia Jaya ~ USJ 7,BRT,#115740,#FFFFFF

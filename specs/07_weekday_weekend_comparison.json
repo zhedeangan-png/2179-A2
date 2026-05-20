@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Weekday ridership is higher than weekend ridership",
+  "width": 380,
+  "height": 340,
+  "padding": {
+    "left": 10,
+    "right": 45,
+    "top": 10,
+    "bottom": 80
+  },
+  "data": {
+    "url": "data/weekday_weekend_ridership_2026.csv"
+  },
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "line",
+      "type": "nominal",
+      "sort": [
+        "LRT Ampang/Sri Petaling",
+        "LRT Kelana Jaya",
+        "MRT Kajang",
+        "MRT Putrajaya",
+        "KL Monorail",
+        "BRT Sunway"
+      ],
+      "title": null,
+      "axis": {
+        "labelAngle": -25,
+        "labelFontSize": 10,
+        "labelPadding": 8,
+        "labelLimit": 150
+      }
+    },
+    "xOffset": {
+      "field": "day_type"
+    },
+    "y": {
+      "field": "avg_ridership",
+      "type": "quantitative",
+      "title": "Average ridership"
+    },
+    "color": {
+      "field": "day_type",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Weekday",
+          "Weekend"
+        ],
+        "range": [
+          "#0072B2",
+          "#999999"
+        ]
+      },
+      "title": "Day type"
+    },
+    "tooltip": [
+      {
+        "field": "line",
+        "type": "nominal",
+        "title": "Line"
+      },
+      {
+        "field": "day_type",
+        "type": "nominal",
+        "title": "Day type"
+      },
+      {
+        "field": "avg_ridership",
+        "type": "quantitative",
+        "title": "Avg riders",
+        "format": ","
+      }
+    ]
+  },
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Inter, Arial, sans-serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937"
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151",
+      "gridColor": "#e5e7eb"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "orient": "bottom"
+    },
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

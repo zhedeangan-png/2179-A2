@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mind the Access Gap</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+  <main class="page">
+    <header class="hero">
+      <h1>Mind the Access Gap</h1>
+      <p class="subtitle">
+        How evenly do LRT, MRT, Monorail, and BRT Sunway serve everyday mobility
+        across the Klang Valley?
+      </p>
+      <p class="note">
+        This page is a starter version. Replace draft text with your final story after
+        checking each chart.
+      </p>
+    </header>
+
+    <section class="section">
+      <h2>Where the network reaches</h2>
+      <p class="section-intro">
+        Rail-based access is spatial. The map shows how lines and stations cluster
+        around some corridors more than others.
+      </p>
+
+      <div class="grid-2-equal map-support-row">
+        <div class="chart-card">
+          <div id="vis1"></div>
+        </div>
+
+        <div class="chart-card">
+          <div id="vis2"></div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>How to read this section:</strong><br>
+        The dot map shows station locations by line.
+        The bin map groups nearby stations into small areas.
+        Darker cells show stronger station concentration.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How large is each line?</h2>
+      <p class="section-intro">
+        Station count gives a simple view of network coverage by line.
+      </p>
+
+      <div class="grid-2-equal">
+        <div class="chart-card">
+          <div id="vis3"></div>
+        </div>
+
+        <div class="chart-card">
+          <div id="vis12"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Which lines carry the most people?</h2>
+      <p class="section-intro">
+        Ridership reveals which parts of the network carry the heaviest daily load.
+      </p>
+
+      <div class="chart-card">
+        <div id="vis4"></div>
+      </div>
+
+      <div class="grid-2-equal" style="margin-top: 24px;">
+        <div class="chart-card">
+          <div id="vis5"></div>
+        </div>
+
+        <div class="chart-card">
+          <div id="vis6"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Access also depends on waiting time</h2>
+      <p class="section-intro">
+        Headway means the time between vehicles. A lower headway usually means
+        a shorter wait for passengers.
+      </p>
+
+      <div class="grid-2-equal">
+        <div class="chart-card">
+          <div id="vis7"></div>
+        </div>
+
+        <div class="chart-card">
+          <div id="vis8"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>BRT Sunway as a local connector</h2>
+      <p class="section-intro">
+        BRT Sunway is smaller than the main rail lines, but it plays a focused role
+        around Sunway and USJ.
+      </p>
+
+      <div class="chart-card chart-card-wide">
+        <div id="vis9"></div>
+      </div>
+
+      <div class="chart-card" style="margin-top: 24px;">
+        <div id="vis10"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Final takeaway</h2>
+      <p class="section-intro">
+        The Klang Valley network is not experienced evenly. Access depends on
+        where stations are located, how heavily lines are used, and how long
+        passengers wait.
+      </p>
+
+      <div class="metadata">
+        Author: Zhe Dean Gan. Data sources: data.gov.my GTFS Static, Prasarana/MOT
+        ridership data, and processed BRT Sunway OD data. AI assistance used for
+        data preparation, coding guidance, and writing feedback.
+      </div>
+    </section>
+  </main>
+
+  <script src="js/vega_lite_vis.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+region,station_records,unique_station_names,area_sqkm,station_records_per_100_sqkm,unique_stations_per_100_sqkm,lon,lat
+Selangor,72,70,7936.9,0.91,0.88,101.4989,3.2729
+Kuala Lumpur,94,72,241.5,38.92,29.81,101.6901,3.1437
+Putrajaya,1,1,48.5,2.06,2.06,101.6912,2.9317

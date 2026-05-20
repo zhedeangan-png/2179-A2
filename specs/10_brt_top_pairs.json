@@ -1,0 +1,83 @@
+{
+  "title": "Busiest BRT Sunway stop pairs in 2026",
+  "width": 750,
+  "height": 420,
+  "data": {
+    "url": "data/brt_top_pairs_2026.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.origin_stop + ' \u2192 ' + datum.destination_stop",
+      "as": "pair"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 4,
+    "color": "#56B4E9"
+  },
+  "encoding": {
+    "x": {
+      "field": "total_ridership",
+      "type": "quantitative",
+      "title": "Total ridership"
+    },
+    "y": {
+      "field": "pair",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null
+    },
+    "tooltip": [
+      {
+        "field": "origin_stop",
+        "type": "nominal",
+        "title": "Origin"
+      },
+      {
+        "field": "destination_stop",
+        "type": "nominal",
+        "title": "Destination"
+      },
+      {
+        "field": "total_ridership",
+        "type": "quantitative",
+        "title": "Total riders",
+        "format": ","
+      },
+      {
+        "field": "avg_daily_ridership",
+        "type": "quantitative",
+        "title": "Avg daily riders",
+        "format": ","
+      }
+    ]
+  },
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Inter, Arial, sans-serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937"
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151",
+      "gridColor": "#e5e7eb"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "orient": "bottom"
+    },
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

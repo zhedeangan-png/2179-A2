@@ -1,0 +1,168 @@
+stop_id,station_name,stop_name,stop_lat,stop_lon,category,route_id,route_short_name,route_long_name,route_color_hex,isOKU,is_interchange_name,status
+AG18,Ampang,AMPANG,3.150318,101.760049,LRT,AG,AGL,LRT Ampang Line,#e57200,True,False,valid
+AG17,Cahaya,CAHAYA,3.140575,101.756677,LRT,AG,AGL,LRT Ampang Line,#e57200,True,False,valid
+AG16,Cempaka,CEMPAKA,3.138324,101.752979,LRT,AG,AGL,LRT Ampang Line,#e57200,True,False,valid
+AG15,Pandan Indah,PANDAN INDAH,3.134581,101.746509,LRT,AG,AGL,LRT Ampang Line,#e57200,True,False,valid
+AG14,Pandan Jaya,PANDAN JAYA,3.130141,101.739122,LRT,AG,AGL,LRT Ampang Line,#e57200,True,False,valid
+AG13,Maluri,MALURI,3.12329,101.727283,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+AG12,Miharja,MIHARJA,3.120973,101.717922,LRT,AG,AGL,LRT Ampang Line,#e57200,True,False,valid
+AG11,Chan Sow Lin,CHAN SOW LIN,3.128105,101.715637,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+AG10,Pudu,PUDU,3.134879,101.711957,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+AG9,Hang Tuah,HANG TUAH,3.140012,101.705984,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+AG8,Plaza Rakyat,PLAZA RAKYAT,3.144049,101.702105,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+AG7,Masjid Jamek,MASJID JAMEK,3.14927,101.696377,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+AG6,Bandaraya - UOB,BANDARAYA - UOB,3.155567,101.694485,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+AG5,Sultan Ismail,SULTAN ISMAIL,3.161245,101.694109,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+AG4,Pwtc,PWTC,3.166333,101.693586,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+AG3,Titiwangsa,TITIWANGSA,3.173497,101.695367,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+AG2,Sentul,SENTUL,3.178484,101.695542,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+AG1,Sentul Timur,SENTUL TIMUR,3.185897,101.695217,LRT,AG,AGL,LRT Ampang Line,#e57200,True,True,valid
+KJ37,Putra Heights,PUTRA HEIGHTS,2.996227,101.575462,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,True,valid
+KJ36,Subang Alam,SUBANG ALAM,3.009421,101.572281,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ35,Alam Megah,ALAM MEGAH,3.023151,101.572029,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ34,Usj 21,USJ 21,3.029881,101.581711,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ33,Wawasan,WAWASAN,3.035062,101.588348,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ32,Taipan,TAIPAN,3.04815,101.590233,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ31,Usj 7,USJ 7,3.054956,101.592194,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ30,Ss 18,SS 18,3.067182,101.585945,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ29,Ss 15,SS 15,3.075972,101.585983,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ28,Subang Jaya,SUBANG JAYA,3.08466,101.588127,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ27,Cgc Glenmarie,CGC GLENMARIE,3.094732,101.590622,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ26,Ara Damansara,ARA DAMANSARA,3.108643,101.586372,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ25,Lembah Subang,LEMBAH SUBANG,3.112094,101.591034,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ24,Kelana Jaya,KELANA JAYA,3.112497,101.6043,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ23,Taman Bahagia,TAMAN BAHAGIA,3.11079,101.612856,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ22,Taman Paramount,TAMAN PARAMOUNT,3.104716,101.623192,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ21,Asia Jaya,ASIA JAYA,3.104343,101.637695,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ20,Taman Jaya,TAMAN JAYA,3.104086,101.645248,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ19,Universiti,UNIVERSITI,3.114616,101.661639,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ18,Kerinchi,KERINCHI,3.115506,101.668572,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ17,Abdullah Hukum,ABDULLAH HUKUM,3.118735,101.672897,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ16,Bank Rakyat Bangsar,BANK RAKYAT BANGSAR,3.127588,101.679062,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ15,KL Sentral - Redone,KL SENTRAL - REDONE,3.13442,101.68625,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ14,Pasar Seni,PASAR SENI,3.142439,101.69531,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,True,valid
+KJ13,Masjid Jamek,MASJID JAMEK,3.149714,101.696815,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,True,valid
+KJ12,Dang Wangi,DANG WANGI,3.156942,101.701975,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ11,Kampung Baru - Cbp Coopbank Pertama,KAMPUNG BARU - CBP COOPBANK PERTAMA,3.161386,101.706608,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ10,KLcc,KLCC,3.158935,101.713287,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ9,Ampang Park,AMPANG PARK,3.159894,101.719017,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,True,valid
+KJ8,Damai,DAMAI,3.164406,101.724489,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ7,Dato' Keramat,DATO' KERAMAT,3.16509,101.73184,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ6,Jelatek,JELATEK,3.167204,101.735344,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ5,Setiawangsa,SETIAWANGSA,3.17576,101.73584,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ4,Sri Rampai,SRI RAMPAI,3.199176,101.73747,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ3,Wangsa Maju,WANGSA MAJU,3.205751,101.731796,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ2,Taman Melati,TAMAN MELATI,3.219558,101.72197,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+KJ1,Gombak,GOMBAK,3.231793,101.724427,LRT,KJ,KJL,LRT Kelana Jaya Line,#D50032,True,False,valid
+SP31,Putra Heights,PUTRA HEIGHTS,2.996016,101.575521,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP29,Puchong Prima,PUCHONG PRIMA,2.999808,101.596692,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP28,Puchong Perdana,PUCHONG PERDANA,3.007913,101.605021,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP27,Bandar Puteri,BANDAR PUTERI,3.017111,101.612855,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP26,Taman Perindustrian Puchong,TAMAN PERINDUSTRIAN PUCHONG,3.022814,101.613514,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP25,Pusat Bandar Puchong,PUSAT BANDAR PUCHONG,3.033194,101.616057,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP24,Ioi Puchong Jaya,IOI PUCHONG JAYA,3.048101,101.62095,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP22,Kinrara,KINRARA,3.050506,101.644294,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP21,Alam Sutera,ALAM SUTERA,3.0547,101.656468,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP20,Muhibbah,MUHIBBAH,3.062229,101.662552,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP19,Awan Besar,AWAN BESAR,3.062131,101.670555,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP18,Sri Petaling,SRI PETALING,3.061445,101.687074,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP17,Bukit Jalil,BUKIT JALIL,3.058196,101.692125,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP16,Sungai Besi,SUNGAI BESI,3.063842,101.708062,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP15,Bandar Tasik Selatan,BANDAR TASIK SELATAN,3.076058,101.711107,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP14,Bandar Tun Razak,BANDAR TUN RAZAK,3.089576,101.712466,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP13,Salak Selatan,SALAK SELATAN,3.102201,101.706179,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP12,Cheras,CHERAS,3.112609,101.714178,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,False,valid
+SP11,Chan Sow Lin,CHAN SOW LIN,3.128105,101.715637,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP10,Pudu,PUDU,3.134879,101.711957,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP9,Hang Tuah,HANG TUAH,3.140012,101.705984,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP8,Plaza Rakyat,PLAZA RAKYAT,3.144049,101.702105,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP7,Masjid Jamek,MASJID JAMEK,3.14927,101.696377,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP6,Bandaraya - UOB,BANDARAYA - UOB,3.155567,101.694485,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP5,Sultan Ismail,SULTAN ISMAIL,3.161245,101.694109,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP4,Pwtc,PWTC,3.166333,101.693586,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP3,Titiwangsa,TITIWANGSA,3.173497,101.695367,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP2,Sentul,SENTUL,3.178484,101.695542,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+SP1,Sentul Timur,SENTUL TIMUR,3.185897,101.695217,LRT,PH,SPL,LRT Sri Petaling Line,#76232f,True,True,valid
+KG04,Kwasa Damansara,KWASA DAMANSARA,3.176146,101.572052,,MRT,,,,True,True,valid
+KG05,Kwasa Sentral,KWASA SENTRAL,3.170112,101.564651,,MRT,,,,True,False,valid
+KG06,Kota Damansara,KOTA DAMANSARA,3.150134,101.57869,,MRT,,,,True,False,valid
+KG07,Surian,SURIAN,3.14948,101.593925,,MRT,,,,True,False,valid
+KG08,Mutiara Damansara,MUTIARA DAMANSARA,3.155301,101.609077,,MRT,,,,True,False,valid
+KG09,Bandar Utama,BANDAR UTAMA,3.14671,101.618599,,MRT,,,,True,False,valid
+KG10,Taman Tun Dr Ismail,TAMAN TUN DR ISMAIL,3.13613,101.630539,,MRT,,,,True,False,valid
+KG12,Phileo Damansara,PHILEO DAMANSARA,3.129864,101.642471,,MRT,,,,True,False,valid
+KG13,Pusat Bandar Damansara,PUSAT BANDAR DAMANSARA,3.143444,101.662857,,MRT,,,,True,False,valid
+KG14,Semantan,SEMANTAN,3.150977,101.665497,,MRT,,,,True,False,valid
+KG15,Muzium Negara,MUZIUM NEGARA,3.137317,101.687336,,MRT,,,,True,False,valid
+KG16,Pasar Seni,PASAR SENI,3.142293265,101.6955642,,MRT,,,,True,True,valid
+KG17,Merdeka,MERDEKA,3.141969,101.70205,,MRT,,,,True,False,valid
+KG18A,Bukit Bintang ,BUKIT BINTANG ,3.146503,101.710947,,MRT,,,,True,True,valid
+KG20,Tun Razak Exchange,TUN RAZAK EXCHANGE,3.142403,101.720156,,MRT,,,,True,True,valid
+KG21,Cochrane,COCHRANE,3.132829,101.722962,,MRT,,,,True,False,valid
+KG22,Maluri,MALURI,3.123623,101.727809,,MRT,,,,True,True,valid
+KG23,Taman Pertama,TAMAN PERTAMA,3.112547,101.729371,,MRT,,,,True,False,valid
+KG24,Taman Midah,TAMAN MIDAH,3.104505,101.732186,,MRT,,,,True,False,valid
+KG25,Taman Mutiara,TAMAN MUTIARA,3.090989,101.740453,,MRT,,,,True,False,valid
+KG26,Taman Connaught,TAMAN CONNAUGHT,3.079172,101.74522,,MRT,,,,True,False,valid
+KG27,Taman Suntex,TAMAN SUNTEX,3.071578,101.763552,,MRT,,,,True,False,valid
+KG28,Sri Raya,SRI RAYA,3.062273,101.772899,,MRT,,,,True,False,valid
+KG29,Bandar Tun Hussein Onn,BANDAR TUN HUSSEIN ONN,3.048223,101.775109,,MRT,,,,True,False,valid
+KG30,Batu 11 Cheras,BATU 11 CHERAS,3.041339,101.773383,,MRT,,,,True,False,valid
+KG31,Bukit Dukung,BUKIT DUKUNG,3.026413,101.771072,,MRT,,,,True,False,valid
+KG33,Sungai Jernih,SUNGAI JERNIH,3.000948,101.783857,,MRT,,,,True,False,valid
+KG34,Stadium Kajang,STADIUM KAJANG,2.994514,101.786338,,MRT,,,,True,False,valid
+KG35,Kajang,KAJANG,2.982778,101.790278,,MRT,,,,True,False,valid
+PY01,Kwasa Damansara,KWASA DAMANSARA,3.1763324,101.5721456,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,True,valid
+PY03,Kampung Selamat,KAMPUNG SELAMAT,3.197266,101.578499,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY04,Sungai Buloh,SUNGAI BULOH,3.206429,101.581779,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY05,Damansara Damai,DAMANSARA DAMAI,3.199892,101.592623,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY06,Sri Damansara Barat,SRI DAMANSARA BARAT,3.198197,101.608302,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY07,Sri Damansara Sentral,SRI DAMANSARA SENTRAL,3.198815,101.621396,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY08,Sri Damansara Timur,SRI DAMANSARA TIMUR,3.207832,101.628716,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY09,Metro Prima,METRO PRIMA,3.214438,101.639402,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY10,Kepong Baru,KEPONG BARU,3.211663,101.648193,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY11,Jinjang,JINJANG,3.209544,101.655829,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY12,Sri Delima,SRI DELIMA,3.207108,101.665749,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY13,Kampung Batu,KAMPUNG BATU,3.205521,101.675473,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY14,Kentomen,KENTOMEN,3.19563,101.6797,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY15,Jalan Ipoh,JALAN IPOH,3.189319,101.681145,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY16,Sentul Barat,SENTUL BARAT,3.179369,101.684742,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY17,Titiwangsa,TITIWANGSA,3.17408,101.69581,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,True,valid
+PY18,Hospital Kuala Lumpur,HOSPITAL KUALA LUMPUR,3.17405,101.70239,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY19,Raja Uda,RAJA UDA,3.16794,101.71017,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY20,Ampang Park,AMPANG PARK,3.16225,101.71781,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,True,valid
+PY21,Persiaran KLcc,PERSIARAN KLCC,3.15712,101.71834,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY22,Conlay,CONLAY,3.15145,101.71801,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY23,Tun Razak Exchange,TUN RAZAK EXCHANGE,3.14289,101.72034,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,True,valid
+PY24,Chan Sow Lin,CHAN SOW LIN,3.12839,101.71663,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,True,valid
+PY27,Kuchai,KUCHAI,3.089546,101.694124,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY28,Taman Naga Emas,TAMAN NAGA EMAS,3.077688,101.699867,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY29,Sungai Besi,SUNGAI BESI,3.063737,101.7084,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,True,valid
+PY31,Serdang Raya Utara,SERDANG RAYA UTARA,3.041674,101.704928,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY32,Serdang Raya Selatan,SERDANG RAYA SELATAN,3.028463,101.707514,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY33,Serdang Jaya,SERDANG JAYA,3.0216,101.709,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY34,Upm,UPM,3.008489,101.705396,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY36,Taman Equine,TAMAN EQUINE,2.98942,101.67244,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY37,Putra Permai,PUTRA PERMAI,2.98339,101.66099,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY38,16 Sierra,16 SIERRA,2.964974,101.654812,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY39,Cyberjaya Utara,CYBERJAYA UTARA,2.95,101.6573,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY40,Cyberjaya City Centre,CYBERJAYA CITY CENTRE,2.9384,101.6659,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+PY41,Putrajaya Sentral,PUTRAJAYA SENTRAL,2.9313,101.6715,MRT,PYL,PYL,MRT Putrajaya Line,#FFCD00,True,False,valid
+MR1,KL Sentral,KL SENTRAL,3.132852,101.687817,MRL,MR,MRL,KL Monorail Line,#84bd00,True,False,valid
+MR2,Tun Sambanthan,TUN SAMBANTHAN,3.13132,101.69085,MRL,MR,MRL,KL Monorail Line,#84bd00,True,False,valid
+MR3,Maharajalela,MAHARAJALELA,3.138743,101.699268,MRL,MR,MRL,KL Monorail Line,#84bd00,True,False,valid
+MR4,Hang Tuah,HANG TUAH,3.140511,101.706029,MRL,MR,MRL,KL Monorail Line,#84bd00,True,True,valid
+MR5,Imbi,IMBI,3.14283,101.70945,MRL,MR,MRL,KL Monorail Line,#84bd00,True,False,valid
+MR6,Bukit Bintang ,BUKIT BINTANG ,3.146022,101.7115,MRL,MR,MRL,KL Monorail Line,#84bd00,True,True,valid
+MR7,Raja Chulan,RAJA CHULAN,3.150878,101.710432,MRL,MR,MRL,KL Monorail Line,#84bd00,True,False,valid
+MR8,Bukit Nanas,BUKIT NANAS,3.156214,101.704809,MRL,MR,MRL,KL Monorail Line,#84bd00,True,False,valid
+MR9,Medan Tuanku,MEDAN TUANKU,3.15935,101.69888,MRL,MR,MRL,KL Monorail Line,#84bd00,True,False,valid
+MR10,Chow Kit,CHOW KIT,3.167358,101.698379,MRL,MR,MRL,KL Monorail Line,#84bd00,True,False,valid
+MR11,Titiwangsa,TITIWANGSA,3.173192,101.696022,MRL,MR,MRL,KL Monorail Line,#84bd00,True,True,valid
+BRT1,Sunway-Setia Jaya,SUNWAY-SETIA JAYA,3.0828,101.6123,BRT,BRT,BRT,BRT Sunway Line,#115740,True,False,valid
+BRT2,Mentari,MENTARI,3.0761,101.6101,BRT,BRT,BRT,BRT Sunway Line,#115740,True,False,valid
+BRT3,Sunway Lagoon ,SUNWAY LAGOON ,3.0706,101.6107,BRT,BRT,BRT,BRT Sunway Line,#115740,True,False,valid
+BRT4,Sunmed,SUNMED,3.0656,101.6087,BRT,BRT,BRT,BRT Sunway Line,#115740,True,False,valid
+BRT5,Sunu-Monash,SunU-Monash,3.0654,101.6016,BRT,BRT,BRT,BRT Sunway Line,#115740,True,False,valid
+BRT6,South Quay-Usj 1,SOUTH QUAY-USJ 1,3.0617,101.5969,BRT,BRT,BRT,BRT Sunway Line,#115740,True,False,valid
+BRT7,Usj7,USJ7,3.0553,101.5919,BRT,BRT,BRT,BRT Sunway Line,#115740,True,False,valid

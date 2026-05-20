@@ -1,0 +1,43 @@
+line,line_id,mode,day_of_week,avg_ridership,days_observed,day_order
+BRT Sunway,BRT,BRT,Friday,22251,17,5
+BRT Sunway,BRT,BRT,Monday,21779,17,1
+BRT Sunway,BRT,BRT,Saturday,14998,17,6
+BRT Sunway,BRT,BRT,Sunday,12566,17,7
+BRT Sunway,BRT,BRT,Thursday,23096,18,4
+BRT Sunway,BRT,BRT,Tuesday,23543,17,2
+BRT Sunway,BRT,BRT,Wednesday,24247,17,3
+KL Monorail,MR,Monorail,Friday,62342,17,5
+KL Monorail,MR,Monorail,Monday,57070,17,1
+KL Monorail,MR,Monorail,Saturday,53712,17,6
+KL Monorail,MR,Monorail,Sunday,47547,17,7
+KL Monorail,MR,Monorail,Thursday,59887,18,4
+KL Monorail,MR,Monorail,Tuesday,58342,17,2
+KL Monorail,MR,Monorail,Wednesday,59118,17,3
+LRT Ampang/Sri Petaling,AG/PH,LRT,Friday,221822,17,5
+LRT Ampang/Sri Petaling,AG/PH,LRT,Monday,212439,17,1
+LRT Ampang/Sri Petaling,AG/PH,LRT,Saturday,167639,17,6
+LRT Ampang/Sri Petaling,AG/PH,LRT,Sunday,140032,17,7
+LRT Ampang/Sri Petaling,AG/PH,LRT,Thursday,220103,18,4
+LRT Ampang/Sri Petaling,AG/PH,LRT,Tuesday,219925,17,2
+LRT Ampang/Sri Petaling,AG/PH,LRT,Wednesday,225088,17,3
+LRT Kelana Jaya,KJ,LRT,Friday,275342,17,5
+LRT Kelana Jaya,KJ,LRT,Monday,265288,17,1
+LRT Kelana Jaya,KJ,LRT,Saturday,165018,17,6
+LRT Kelana Jaya,KJ,LRT,Sunday,143045,17,7
+LRT Kelana Jaya,KJ,LRT,Thursday,280849,18,4
+LRT Kelana Jaya,KJ,LRT,Tuesday,282252,17,2
+LRT Kelana Jaya,KJ,LRT,Wednesday,290787,17,3
+MRT Kajang,KGL,MRT,Friday,283307,17,5
+MRT Kajang,KGL,MRT,Monday,269349,17,1
+MRT Kajang,KGL,MRT,Saturday,203809,17,6
+MRT Kajang,KGL,MRT,Sunday,181520,17,7
+MRT Kajang,KGL,MRT,Thursday,285472,18,4
+MRT Kajang,KGL,MRT,Tuesday,282863,17,2
+MRT Kajang,KGL,MRT,Wednesday,288577,17,3
+MRT Putrajaya,PYL,MRT,Friday,176308,17,5
+MRT Putrajaya,PYL,MRT,Monday,174519,17,1
+MRT Putrajaya,PYL,MRT,Saturday,111727,17,6
+MRT Putrajaya,PYL,MRT,Sunday,98313,17,7
+MRT Putrajaya,PYL,MRT,Thursday,180730,18,4
+MRT Putrajaya,PYL,MRT,Tuesday,181728,17,2
+MRT Putrajaya,PYL,MRT,Wednesday,185727,17,3

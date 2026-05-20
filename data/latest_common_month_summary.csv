@@ -1,0 +1,7 @@
+year_month,year,month,month_name,mode,line_id,line,total_ridership,avg_daily_ridership,days_observed
+2026-04,2026,4,Apr,MRT,KGL,MRT Kajang,8120567,270686,30
+2026-04,2026,4,Apr,LRT,KJ,LRT Kelana Jaya,7794066,259802,30
+2026-04,2026,4,Apr,LRT,AG/PH,LRT Ampang/Sri Petaling,6326276,210876,30
+2026-04,2026,4,Apr,MRT,PYL,MRT Putrajaya,5146938,171565,30
+2026-04,2026,4,Apr,Monorail,MR,KL Monorail,1718981,57299,30
+2026-04,2026,4,Apr,BRT,BRT,BRT Sunway,670439,22348,30

@@ -1,0 +1,100 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "BRT Sunway origin-destination ridership in 2026",
+  "width": 760,
+  "height": 430,
+  "padding": {
+    "left": 20,
+    "right": 30,
+    "top": 10,
+    "bottom": 95
+  },
+  "data": {
+    "url": "data/brt_od_matrix_2026.csv"
+  },
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "destination_stop",
+      "type": "nominal",
+      "title": "Destination",
+      "axis": {
+        "labelAngle": -30,
+        "labelFontSize": 10,
+        "labelLimit": 130,
+        "labelPadding": 8
+      }
+    },
+    "y": {
+      "field": "origin_stop",
+      "type": "nominal",
+      "title": "Origin",
+      "axis": {
+        "labelFontSize": 10,
+        "labelLimit": 160
+      }
+    },
+    "color": {
+      "field": "total_ridership",
+      "type": "quantitative",
+      "title": "Total riders",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "origin_stop",
+        "type": "nominal",
+        "title": "Origin"
+      },
+      {
+        "field": "destination_stop",
+        "type": "nominal",
+        "title": "Destination"
+      },
+      {
+        "field": "total_ridership",
+        "type": "quantitative",
+        "title": "Total riders",
+        "format": ","
+      },
+      {
+        "field": "avg_daily_ridership",
+        "type": "quantitative",
+        "title": "Avg daily riders",
+        "format": ","
+      }
+    ]
+  },
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Inter, Arial, sans-serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937"
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#374151",
+      "titleColor": "#374151",
+      "gridColor": "#e5e7eb"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "orient": "bottom"
+    },
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

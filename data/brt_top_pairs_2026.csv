@@ -1,0 +1,21 @@
+origin_stop,destination_stop,total_ridership,avg_daily_ridership,days_observed
+SunU-Monash,USJ 7,194071,1481,131
+SunMed,USJ 7,178785,1365,131
+USJ 7,SunU-Monash,178652,1364,131
+USJ 7,Sunway Lagoon,173805,1327,131
+Sunway Lagoon,USJ 7,169854,1297,131
+USJ 7,SunMed,167250,1277,131
+South Quay-USJ 1,USJ 7,125744,960,131
+USJ 7,South Quay-USJ 1,125141,955,131
+South Quay-USJ 1,SunU-Monash,85661,654,131
+SunMed,Sunway Lagoon,83534,638,131
+SunU-Monash,South Quay-USJ 1,75924,580,131
+Sunway Lagoon,SunMed,74945,572,131
+SunMed,South Quay-USJ 1,63607,486,131
+South Quay-USJ 1,SunMed,63539,485,131
+SunMed,SunU-Monash,58680,448,131
+Sunway-Setia Jaya,USJ 7,54819,418,131
+SunU-Monash,SunMed,52076,398,131
+USJ 7,Sunway-Setia Jaya,49194,376,131
+USJ 7,Mentari,48408,370,131
+SunMed,Mentari,45466,347,131

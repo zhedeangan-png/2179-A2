@@ -1,0 +1,239 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Where are the stations?",
+    "subtitle": "Station locations by line, with Klang Valley district outlines."
+  },
+  "width": 460,
+  "height": 420,
+  "padding": {
+    "left": 5,
+    "right": 5,
+    "top": 5,
+    "bottom": 5
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "projection": {
+    "type": "mercator",
+    "center": [101.66, 3.08],
+    "scale": 70000
+  },
+  "params": [
+    {
+      "name": "selectedLine",
+      "value": "All lines",
+      "bind": {
+        "input": "select",
+        "name": "Highlight line: ",
+        "options": [
+          "All lines",
+          "LRT Ampang Line",
+          "LRT Kelana Jaya Line",
+          "LRT Sri Petaling Line",
+          "MRT Kajang Line",
+          "MRT Putrajaya Line",
+          "KL Monorail Line",
+          "BRT Sunway Line"
+        ]
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "data/klang_valley_districts.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": true,
+        "fill": "#f8fafc",
+        "stroke": "#94a3b8",
+        "strokeWidth": 1.1,
+        "opacity": 1
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "properties.district",
+            "type": "nominal",
+            "title": "District"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/routes_direction0.geojson"
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#d6dee8",
+        "strokeWidth": 1.7,
+        "opacity": 0.85
+      }
+    },
+    {
+      "data": {
+        "url": "data/stations.csv"
+      },
+      "transform": [
+        {
+          "calculate": "datum.route_id == 'MRT' ? 'MRT Kajang Line' : datum.route_long_name",
+          "as": "line_fixed"
+        },
+        {
+          "calculate": "datum.route_id == 'MRT' ? 'MRT' : datum.category",
+          "as": "mode_fixed"
+        },
+        {
+          "calculate": "selectedLine == 'All lines' || datum.line_fixed == selectedLine ? 'Selected' : 'Other'",
+          "as": "highlight_status"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "filled": true,
+        "stroke": "white",
+        "strokeWidth": 0.7
+      },
+      "encoding": {
+        "longitude": {
+          "field": "stop_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "stop_lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "condition": {
+            "test": "datum.highlight_status == 'Selected'",
+            "value": 68
+          },
+          "value": 18
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum.highlight_status == 'Selected'",
+            "value": 1
+          },
+          "value": 0.12
+        },
+        "color": {
+          "field": "line_fixed",
+          "type": "nominal",
+          "title": "Line",
+          "scale": {
+            "domain": [
+              "LRT Ampang Line",
+              "LRT Kelana Jaya Line",
+              "LRT Sri Petaling Line",
+              "MRT Kajang Line",
+              "MRT Putrajaya Line",
+              "KL Monorail Line",
+              "BRT Sunway Line"
+            ],
+            "range": [
+              "#E69F00",
+              "#0072B2",
+              "#D55E00",
+              "#009E73",
+              "#CC79A7",
+              "#6A3D9A",
+              "#56B4E9"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "station_name",
+            "type": "nominal",
+            "title": "Station"
+          },
+          {
+            "field": "line_fixed",
+            "type": "nominal",
+            "title": "Line"
+          },
+          {
+            "field": "mode_fixed",
+            "type": "nominal",
+            "title": "Mode"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          { "label": "Petaling", "lon": 101.575, "lat": 3.125, "dx": -28, "dy": -6 },
+          { "label": "Central KL", "lon": 101.67, "lat": 3.157, "dx": 10, "dy": -12 },
+          { "label": "Sunway", "lon": 101.627, "lat": 3.066, "dx": 6, "dy": -8 },
+          { "label": "Kajang", "lon": 101.770, "lat": 2.993, "dx": 8, "dy": 4 },
+          { "label": "Sepang", "lon": 101.715, "lat": 2.935, "dx": -18, "dy": 8 }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 9,
+        "fontWeight": 600,
+        "color": "#475569"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        },
+        "dx": {
+          "field": "dx",
+          "type": "quantitative"
+        },
+        "dy": {
+          "field": "dy",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Georgia, 'Times New Roman', serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937",
+      "subtitleFont": "Inter, Arial, sans-serif",
+      "subtitleFontSize": 12,
+      "subtitleColor": "#64748b"
+    },
+    "legend": {
+      "orient": "bottom",
+      "columns": 2,
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 10,
+      "titleFontSize": 11
+    },
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

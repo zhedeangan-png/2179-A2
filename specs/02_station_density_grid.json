@@ -1,0 +1,159 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Where are stations most concentrated?",
+    "subtitle": "Darker squares show areas with more nearby stations."
+  },
+  "width": 460,
+  "height": 420,
+  "padding": {
+    "left": 5,
+    "right": 5,
+    "top": 5,
+    "bottom": 5
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "projection": {
+    "type": "mercator",
+    "center": [
+      101.66,
+      3.08
+    ],
+    "scale": 68000
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/station_density_grid.csv"
+      },
+      "mark": {
+        "type": "square",
+        "size": 180,
+        "stroke": "#1f2933",
+        "strokeWidth": 0.7
+      },
+      "encoding": {
+        "longitude": {
+          "field": "grid_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "grid_lat",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "station_records",
+          "type": "quantitative",
+          "title": "Number of nearby stations",
+          "scale": {
+            "scheme": "blues"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "station_records",
+            "type": "quantitative",
+            "title": "Nearby stations"
+          },
+          {
+            "field": "lines",
+            "type": "nominal",
+            "title": "Lines in area"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "label": "Gombak",
+            "lon": 101.724,
+            "lat": 3.232
+          },
+          {
+            "label": "Central KL",
+            "lon": 101.697,
+            "lat": 3.145
+          },
+          {
+            "label": "Sunway",
+            "lon": 101.607,
+            "lat": 3.066
+          },
+          {
+            "label": "Subang Jaya",
+            "lon": 101.585,
+            "lat": 3.045
+          },
+          {
+            "label": "Kajang",
+            "lon": 101.790,
+            "lat": 2.963
+          },
+          {
+            "label": "Putrajaya",
+            "lon": 101.671,
+            "lat": 2.926
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": 600,
+        "color": "#475569",
+        "dx": 6,
+        "dy": -6
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Georgia, 'Times New Roman', serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937",
+      "subtitleFont": "Inter, Arial, sans-serif",
+      "subtitleFontSize": 12,
+      "subtitleColor": "#64748b"
+    },
+    "axis": {
+      "labels": false,
+      "ticks": false,
+      "domain": false,
+      "grid": false,
+      "title": null
+    },
+    "legend": {
+      "orient": "bottom",
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelFontSize": 10,
+      "titleFontSize": 11
+    },
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

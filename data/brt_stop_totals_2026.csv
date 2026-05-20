@@ -1,0 +1,15 @@
+stop,role,total_ridership,avg_daily_ridership,days_observed
+Mentari,destination,165133,1261,131
+Mentari,origin,154785,1182,131
+South Quay-USJ 1,destination,330682,2524,131
+South Quay-USJ 1,origin,341210,2605,131
+SunMed,destination,443851,3388,131
+SunMed,origin,474597,3623,131
+SunU-Monash,destination,404910,3091,131
+SunU-Monash,origin,407444,3110,131
+Sunway Lagoon,destination,409371,3125,131
+Sunway Lagoon,origin,387634,2959,131
+Sunway-Setia Jaya,destination,164707,1257,131
+Sunway-Setia Jaya,origin,178493,1363,131
+USJ 7,destination,767959,5862,131
+USJ 7,origin,742450,5668,131

@@ -1,0 +1,120 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "2026 ridership pattern by day of week",
+    "subtitle": "Darker cells show higher average ridership."
+  },
+  "width": 460,
+  "height": 300,
+  "padding": {
+    "left": 5,
+    "right": 5,
+    "top": 5,
+    "bottom": 5
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "data": {
+    "url": "data/day_of_week_ridership_2026.csv"
+  },
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "day_of_week",
+      "type": "ordinal",
+      "sort": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "title": null,
+      "axis": {
+        "labelAngle": -35,
+        "labelFontSize": 10
+      }
+    },
+    "y": {
+      "field": "line",
+      "type": "nominal",
+      "sort": [
+        "LRT Ampang/Sri Petaling",
+        "LRT Kelana Jaya",
+        "MRT Kajang",
+        "MRT Putrajaya",
+        "KL Monorail",
+        "BRT Sunway"
+      ],
+      "title": null,
+      "axis": {
+        "labelLimit": 135,
+        "labelFontSize": 10
+      }
+    },
+    "color": {
+      "field": "avg_ridership",
+      "type": "quantitative",
+      "title": "Average ridership",
+      "scale": {
+        "scheme": "blues"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "line",
+        "type": "nominal",
+        "title": "Line"
+      },
+      {
+        "field": "day_of_week",
+        "type": "nominal",
+        "title": "Day"
+      },
+      {
+        "field": "avg_ridership",
+        "type": "quantitative",
+        "title": "Avg riders",
+        "format": ","
+      }
+    ]
+  },
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Georgia, 'Times New Roman', serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937",
+      "subtitleFont": "Inter, Arial, sans-serif",
+      "subtitleFontSize": 12,
+      "subtitleColor": "#64748b"
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#334155",
+      "gridColor": "#e5e7eb"
+    },
+    "legend": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "orient": "bottom",
+      "titleLimit": 150,
+      "labelLimit": 120
+    },
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

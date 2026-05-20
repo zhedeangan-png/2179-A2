@@ -1,0 +1,19 @@
+file,description,source
+line_ridership_daily.csv,Daily ridership in long format for rail lines from headline data plus BRT Sunway totals derived from BRT OD data.,ridership_headline.csv; brt_2026_daily (1).csv
+line_ridership_monthly.csv,Monthly total and average daily ridership by service line.,line_ridership_daily.csv
+latest_common_month_summary.csv,April 2026 summary for all selected services because this is the latest complete common month across rail and BRT files.,line_ridership_monthly.csv
+weekday_weekend_ridership_2026.csv,Average ridership by weekday/weekend for Jan-Apr 2026.,line_ridership_daily.csv
+day_of_week_ridership_2026.csv,Average ridership by day of week for Jan-Apr 2026.,line_ridership_daily.csv
+stations.csv,GTFS station coordinates and route metadata for map point layers.,stops.txt; routes.txt
+routes_clean.csv,Cleaned route metadata and official route colours.,routes.txt
+station_counts_by_line.csv,Station counts by line.,stations.csv
+interchange_stations.csv,Stations with the same name served by multiple route IDs.,stations.csv
+station_density_grid.csv,Approximate grid-based station density for a custom map idiom.,stations.csv
+routes_direction0.geojson,"GeoJSON route line shapes, using one direction per line to avoid duplicate overlay.",shapes.txt; trips.txt; routes.txt
+route_shape_points_direction0.csv,CSV shape points for Vega-Lite line maps if GeoJSON is inconvenient.,shapes.txt; trips.txt; routes.txt
+frequency_summary_by_line.csv,Headway/frequency summary by line and service day.,frequencies.txt; trips.txt; routes.txt
+brt_od_matrix_2026.csv,"BRT Sunway OD matrix aggregated over 2026 data, excluding All Stations totals.",brt_2026_daily (1).csv
+brt_top_pairs_2026.csv,Top 20 BRT origin-destination pairs excluding same-stop pairs.,brt_od_matrix_2026.csv
+brt_daily_total_2026.csv,BRT Sunway total daily ridership derived from station-to-station OD rows.,brt_2026_daily (1).csv
+brt_stop_totals_2026.csv,BRT stop totals by origin/destination role.,brt_2026_daily (1).csv
+brt_stops.csv,BRT Sunway station coordinates from GTFS.,stops.txt

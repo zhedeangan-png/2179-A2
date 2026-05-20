@@ -1,0 +1,142 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average daily ridership in April 2026",
+    "subtitle": "MRT Kajang and LRT Kelana Jaya carry the highest daily ridership."
+  },
+  "width": 460,
+  "height": 330,
+  "padding": {
+    "left": 5,
+    "right": 35,
+    "top": 5,
+    "bottom": 5
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "data": {
+    "url": "data/latest_common_month_summary.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 4
+      },
+      "encoding": {
+        "x": {
+          "field": "avg_daily_ridership",
+          "type": "quantitative",
+          "axis": {
+            "title": null,
+            "grid": true,
+            "format": "~s",
+            "tickCount": 5
+          }
+        },
+        "y": {
+          "field": "line",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null,
+          "axis": {
+            "labelLimit": 150
+          }
+        },
+        "color": {
+          "field": "line",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "LRT Ampang/Sri Petaling",
+              "LRT Kelana Jaya",
+              "MRT Kajang",
+              "MRT Putrajaya",
+              "KL Monorail",
+              "BRT Sunway"
+            ],
+            "range": [
+              "#E69F00",
+              "#0072B2",
+              "#009E73",
+              "#CC79A7",
+              "#6A3D9A",
+              "#56B4E9"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "line",
+            "type": "nominal",
+            "title": "Line"
+          },
+          {
+            "field": "avg_daily_ridership",
+            "type": "quantitative",
+            "title": "Avg daily riders",
+            "format": ","
+          },
+          {
+            "field": "days_observed",
+            "type": "quantitative",
+            "title": "Days observed"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#334155"
+      },
+      "encoding": {
+        "x": {
+          "field": "avg_daily_ridership",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "line",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "text": {
+          "field": "avg_daily_ridership",
+          "type": "quantitative",
+          "format": "~s"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter, Arial, sans-serif",
+    "title": {
+      "font": "Georgia, 'Times New Roman', serif",
+      "fontSize": 18,
+      "fontWeight": 700,
+      "anchor": "start",
+      "color": "#1f2937",
+      "subtitleFont": "Inter, Arial, sans-serif",
+      "subtitleFontSize": 12,
+      "subtitleColor": "#64748b"
+    },
+    "axis": {
+      "labelFont": "Inter, Arial, sans-serif",
+      "titleFont": "Inter, Arial, sans-serif",
+      "labelColor": "#334155",
+      "gridColor": "#e5e7eb"
+    },
+    "view": {
+      "stroke": null
+    },
+    "background": "#ffffff"
+  }
+}

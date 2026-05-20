@@ -1,0 +1,22 @@
+route_id,route_short_name,route_long_name,category,service_id,min_headway_min,max_headway_min,avg_headway_min
+AG,AGL,LRT Ampang Line,LRT,MonFri,3.0,5.0,4.0
+AG,AGL,LRT Ampang Line,LRT,Sat,5.0,5.0,5.0
+AG,AGL,LRT Ampang Line,LRT,Sun,5.0,5.0,5.0
+BRT,BRT,BRT Sunway Line,BRT,MonFri,4.0,8.0,6.4
+BRT,BRT,BRT Sunway Line,BRT,Sat,6.0,6.0,6.0
+BRT,BRT,BRT Sunway Line,BRT,Sun,6.0,6.0,6.0
+KGL,KGL,MRT Kajang Line,MRT,MonFri,6.0,10.0,8.0
+KGL,KGL,MRT Kajang Line,MRT,Sat,10.0,10.0,10.0
+KGL,KGL,MRT Kajang Line,MRT,Sun,10.0,10.0,10.0
+KJ,KJL,LRT Kelana Jaya Line,LRT,MonFri,4.0,7.0,5.8
+KJ,KJL,LRT Kelana Jaya Line,LRT,Sat,7.0,7.0,7.0
+KJ,KJL,LRT Kelana Jaya Line,LRT,Sun,7.0,7.0,7.0
+MR,MRL,KL Monorail Line,MRL,MonFri,7.0,10.0,8.5
+MR,MRL,KL Monorail Line,MRL,Sat,12.0,12.0,12.0
+MR,MRL,KL Monorail Line,MRL,Sun,12.0,12.0,12.0
+PH,SPL,LRT Sri Petaling Line,LRT,MonFri,3.0,5.0,4.0
+PH,SPL,LRT Sri Petaling Line,LRT,Sat,5.0,5.0,5.0
+PH,SPL,LRT Sri Petaling Line,LRT,Sun,5.0,5.0,5.0
+PYL,PYL,MRT Putrajaya Line,MRT,MonFri,4.0,14.0,7.9
+PYL,PYL,MRT Putrajaya Line,MRT,Sat,10.0,10.0,10.0
+PYL,PYL,MRT Putrajaya Line,MRT,Sun,10.0,10.0,10.0

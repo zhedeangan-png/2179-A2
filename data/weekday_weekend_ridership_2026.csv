@@ -1,0 +1,13 @@
+line,line_id,mode,day_type,avg_ridership,days_observed
+BRT Sunway,BRT,BRT,Weekday,22984,86
+BRT Sunway,BRT,BRT,Weekend,13782,34
+KL Monorail,MR,Monorail,Weekday,59358,86
+KL Monorail,MR,Monorail,Weekend,50629,34
+LRT Ampang/Sri Petaling,AG/PH,LRT,Weekday,219878,86
+LRT Ampang/Sri Petaling,AG/PH,LRT,Weekend,153835,34
+LRT Kelana Jaya,KJ,LRT,Weekday,278926,86
+LRT Kelana Jaya,KJ,LRT,Weekend,154032,34
+MRT Kajang,KGL,MRT,Weekday,281955,86
+MRT Kajang,KGL,MRT,Weekend,192665,34
+MRT Putrajaya,PYL,MRT,Weekday,179813,86
+MRT Putrajaya,PYL,MRT,Weekend,105020,34
