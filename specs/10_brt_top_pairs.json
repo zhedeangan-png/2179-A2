@@ -1,59 +1,682 @@
 {
-  "title": "Busiest BRT Sunway stop pairs in 2026",
-  "width": 750,
-  "height": 420,
-  "data": {
-    "url": "data/brt_top_pairs_2026.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "BRT Sunway connects local stops to the wider rail network",
+    "subtitle": "USJ 7 and Sunway-Setia Jaya act as interchange points at each end of the short BRT corridor."
   },
-  "transform": [
+  "width": 1030,
+  "height": 300,
+  "padding": {
+    "left": 10,
+    "right": 20,
+    "top": 10,
+    "bottom": 0
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "layer": [
     {
-      "calculate": "datum.origin_stop + ' \u2192 ' + datum.destination_stop",
-      "as": "pair"
+      "data": {
+        "values": [
+          {
+            "x": 0.25,
+            "x2": 9.75,
+            "y": 1.05,
+            "y2": 5.35
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "fill": "#F8FAFC",
+        "stroke": "#CBD5E1",
+        "strokeWidth": 1,
+        "cornerRadius": 8
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ]
+          },
+          "axis": null
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6
+            ]
+          },
+          "axis": null
+        },
+        "y2": {
+          "field": "y2"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 1.0,
+            "y": 2.05,
+            "order": 1
+          },
+          {
+            "x": 1.0,
+            "y": 3.5,
+            "order": 2
+          },
+          {
+            "x": 1.0,
+            "y": 4.7,
+            "order": 3
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 5,
+        "color": "#D1D5DB"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6
+            ]
+          },
+          "axis": null
+        },
+        "order": {
+          "field": "order",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 1.0,
+            "y": 4.7,
+            "order": 1
+          },
+          {
+            "x": 2.3,
+            "y": 4.7,
+            "order": 2
+          },
+          {
+            "x": 3.7,
+            "y": 4.7,
+            "order": 3
+          },
+          {
+            "x": 5.1,
+            "y": 4.7,
+            "order": 4
+          },
+          {
+            "x": 6.5,
+            "y": 4.7,
+            "order": 5
+          },
+          {
+            "x": 7.9,
+            "y": 4.7,
+            "order": 6
+          },
+          {
+            "x": 9.1,
+            "y": 4.7,
+            "order": 7
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 5,
+        "color": "#D1D5DB"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6
+            ]
+          },
+          "axis": null
+        },
+        "order": {
+          "field": "order",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 5.1,
+            "y": 4.7,
+            "order": 1
+          },
+          {
+            "x": 5.1,
+            "y": 3.05,
+            "order": 2
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 5,
+        "color": "#D1D5DB"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6
+            ]
+          },
+          "axis": null
+        },
+        "order": {
+          "field": "order",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 1.0,
+            "y": 3.5
+          },
+          {
+            "x": 2.3,
+            "y": 4.7
+          },
+          {
+            "x": 3.7,
+            "y": 4.7
+          },
+          {
+            "x": 5.1,
+            "y": 4.7
+          },
+          {
+            "x": 6.5,
+            "y": 4.7
+          },
+          {
+            "x": 7.9,
+            "y": 4.7
+          },
+          {
+            "x": 9.1,
+            "y": 4.7
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "size": 85,
+        "fill": "#CBD5E1",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6
+            ]
+          },
+          "axis": null
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 7.7,
+            "y": 5.05,
+            "label": "Wider rail network"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#94A3B8"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "stop": "USJ 7",
+            "x": 1.0,
+            "y": 2.05,
+            "order": 1
+          },
+          {
+            "stop": "South Quay",
+            "x": 2.2,
+            "y": 2.05,
+            "order": 2
+          },
+          {
+            "stop": "SunU-Monash",
+            "x": 3.6,
+            "y": 1.5,
+            "order": 3
+          },
+          {
+            "stop": "SunMed",
+            "x": 5.6,
+            "y": 1.5,
+            "order": 4
+          },
+          {
+            "stop": "Sunway Lagoon",
+            "x": 5.6,
+            "y": 2.15,
+            "order": 5
+          },
+          {
+            "stop": "Mentari",
+            "x": 5.1,
+            "y": 2.15,
+            "order": 6
+          },
+          {
+            "stop": "Sunway-Setia Jaya",
+            "x": 5.1,
+            "y": 3.05,
+            "order": 7
+          }
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "strokeWidth": 6,
+        "color": "#2F7D5C"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6
+            ]
+          },
+          "axis": null
+        },
+        "order": {
+          "field": "order",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "stop": "USJ 7",
+            "x": 1.0,
+            "y": 2.05,
+            "type": "Interchange"
+          },
+          {
+            "stop": "South Quay",
+            "x": 2.2,
+            "y": 2.05,
+            "type": "BRT stop"
+          },
+          {
+            "stop": "SunU-Monash",
+            "x": 3.6,
+            "y": 1.5,
+            "type": "BRT stop"
+          },
+          {
+            "stop": "SunMed",
+            "x": 5.6,
+            "y": 1.5,
+            "type": "BRT stop"
+          },
+          {
+            "stop": "Sunway Lagoon",
+            "x": 5.6,
+            "y": 2.15,
+            "type": "BRT stop"
+          },
+          {
+            "stop": "Mentari",
+            "x": 5.1,
+            "y": 2.15,
+            "type": "BRT stop"
+          },
+          {
+            "stop": "Sunway-Setia Jaya",
+            "x": 5.1,
+            "y": 3.05,
+            "type": "Interchange"
+          }
+        ]
+      },
+      "mark": {
+        "type": "circle",
+        "stroke": "white",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6
+            ]
+          },
+          "axis": null
+        },
+        "size": {
+          "condition": {
+            "test": "datum.type === 'Interchange'",
+            "value": 320
+          },
+          "value": 145
+        },
+        "color": {
+          "field": "type",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Interchange",
+              "BRT stop"
+            ],
+            "range": [
+              "#0F78B7",
+              "#86B8A8"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "bottom",
+            "direction": "horizontal",
+            "symbolType": "circle",
+            "offset": 0
+          }
+        },
+        "tooltip": [
+          {
+            "field": "stop",
+            "type": "nominal",
+            "title": "Stop"
+          },
+          {
+            "field": "type",
+            "type": "nominal",
+            "title": "Role"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "label": "USJ 7",
+            "x": 0.62,
+            "y": 1.93
+          },
+          {
+            "label": "South Quay",
+            "x": 1.85,
+            "y": 2.37
+          },
+          {
+            "label": "SunU-Monash",
+            "x": 3.12,
+            "y": 1.16
+          },
+          {
+            "label": "SunMed",
+            "x": 5.78,
+            "y": 1.23
+          },
+          {
+            "label": "Sunway Lagoon",
+            "x": 5.78,
+            "y": 2.44
+          },
+          {
+            "label": "Mentari",
+            "x": 4.65,
+            "y": 2.44
+          },
+          {
+            "label": "Sunway-\nSetia Jaya",
+            "x": 4.5,
+            "y": 3.53
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "lineBreak": "\n",
+        "color": "#0f172a"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "note": "Interchanges turn a short BRT route\ninto a wider network link",
+            "x": 1,
+            "y": 0.75
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "lineBreak": "\n",
+        "color": "#0f172a"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              6
+            ]
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "note"
+        }
+      }
     }
   ],
-  "mark": {
-    "type": "bar",
-    "cornerRadiusEnd": 4,
-    "color": "#56B4E9"
-  },
-  "encoding": {
-    "x": {
-      "field": "total_ridership",
-      "type": "quantitative",
-      "title": "Total ridership"
-    },
-    "y": {
-      "field": "pair",
-      "type": "nominal",
-      "sort": "-x",
-      "title": null
-    },
-    "tooltip": [
-      {
-        "field": "origin_stop",
-        "type": "nominal",
-        "title": "Origin"
-      },
-      {
-        "field": "destination_stop",
-        "type": "nominal",
-        "title": "Destination"
-      },
-      {
-        "field": "total_ridership",
-        "type": "quantitative",
-        "title": "Total riders",
-        "format": ","
-      },
-      {
-        "field": "avg_daily_ridership",
-        "type": "quantitative",
-        "title": "Avg daily riders",
-        "format": ","
-      }
-    ]
-  },
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "config": {
     "font": "Inter, Arial, sans-serif",
     "title": {
@@ -61,19 +684,15 @@
       "fontSize": 18,
       "fontWeight": 700,
       "anchor": "start",
-      "color": "#1f2937"
-    },
-    "axis": {
-      "labelFont": "Inter, Arial, sans-serif",
-      "titleFont": "Inter, Arial, sans-serif",
-      "labelColor": "#374151",
-      "titleColor": "#374151",
-      "gridColor": "#e5e7eb"
+      "color": "#1f2937",
+      "subtitleFont": "Inter, Arial, sans-serif",
+      "subtitleFontSize": 12,
+      "subtitleColor": "#64748b"
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
-      "orient": "bottom"
+      "labelColor": "#334155"
     },
     "view": {
       "stroke": null
