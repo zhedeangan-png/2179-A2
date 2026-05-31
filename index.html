@@ -21,50 +21,114 @@
         How evenly do LRT, MRT, Monorail, and BRT Sunway serve everyday mobility
         across the Klang Valley?
       </p>
-      <p class="note">
-        This page is a starter version. Replace draft text with your final story after
-        checking each chart.
-      </p>
     </header>
 
     <section class="section">
       <h2>Where the network reaches</h2>
       <p class="section-intro">
-        Rail-based access is spatial. The map shows how lines and stations cluster
-        around some corridors more than others.
+        Rail access is spatial. Lines and stations cluster in some corridors
+        more than others.
       </p>
 
-      <div class="grid-2-equal map-support-row">
-        <div class="chart-card">
+      <div class="map-layout">
+        <div class="chart-card map-card-large">
           <div id="vis1"></div>
         </div>
 
-        <div class="chart-card">
-          <div id="vis2"></div>
-        </div>
-      </div>
+        <div class="map-side">
+          <aside class="map-insight">
+            <h3>Key pattern</h3>
+            <p>
+              <strong>Central KL forms the densest station cluster.</strong>
+            </p>
+            <p>
+              Most lines converge near the city centre.
+              Outer districts follow longer corridor-style lines.
+            </p>
 
-      <div class="callout">
-        <strong>How to read this section:</strong><br>
-        The dot map shows station locations by line.
-        The bin map groups nearby stations into small areas.
-        Darker cells show stronger station concentration.
+            <h3>Why it matters</h3>
+            <p>
+              Access is strongest near the urban core.
+              Peripheral areas rely on fewer rail paths.
+            </p>
+          </aside>
+
+          <div class="map-read-box">
+            <h3>How to read</h3>
+            <p>
+              Each dot is a station.
+              Colours show rail lines.
+              Larger clusters indicate stronger station concentration.
+            </p>
+          </div>
+
+          <div class="manual-legend">
+            <h3>Line</h3>
+
+            <div class="legend-item">
+              <span class="legend-dot ampang"></span>
+              <span>LRT Ampang Line</span>
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-dot kelana"></span>
+              <span>LRT Kelana Jaya Line</span>
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-dot sri-petaling"></span>
+              <span>LRT Sri Petaling Line</span>
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-dot kajang"></span>
+              <span>MRT Kajang Line</span>
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-dot putrajaya"></span>
+              <span>MRT Putrajaya Line</span>
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-dot monorail"></span>
+              <span>KL Monorail Line</span>
+            </div>
+
+            <div class="legend-item">
+              <span class="legend-dot brt"></span>
+              <span>BRT Sunway Line</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section">
-      <h2>How large is each line?</h2>
+      <h2>Kelana Jaya and Putrajaya dominate station coverage</h2>
       <p class="section-intro">
-        Station count gives a simple view of network coverage by line.
+        Station count shows coverage, while interchanges reveal connectivity.
       </p>
 
-      <div class="grid-2-equal">
+      <div class="grid-2-equal equal-chart-row">
         <div class="chart-card">
           <div id="vis3"></div>
         </div>
 
         <div class="chart-card">
           <div id="vis12"></div>
+        </div>
+      </div>
+
+      <div class="insight-row">
+        <div class="callout insight-small">
+          <strong>Coverage insight:</strong><br>
+          Kelana Jaya and Putrajaya cover the most stations.
+        </div>
+
+        <div class="callout insight-small">
+          <strong>Connectivity insight:</strong><br>
+          Interchanges still cluster around central stations.
         </div>
       </div>
     </section>
@@ -75,8 +139,10 @@
         Ridership reveals which parts of the network carry the heaviest daily load.
       </p>
 
-      <div class="chart-card">
-        <div id="vis4"></div>
+      <div class="ridership-layout">
+        <div class="chart-card ridership-chart">
+          <div id="vis4"></div>
+        </div>
       </div>
 
       <div class="grid-2-equal" style="margin-top: 24px;">
@@ -84,20 +150,20 @@
           <div id="vis5"></div>
         </div>
 
-        <div class="chart-card">
+        <div class="chart-card compact-chart">
           <div id="vis6"></div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <h2>Access also depends on waiting time</h2>
+      <h2>Access is not only about having stations nearby</h2>
       <p class="section-intro">
-        Headway means the time between vehicles. A lower headway usually means
-        a shorter wait for passengers.
+        Private transport still dominates trips.
+        Waiting time also changes how accessible each line feels.
       </p>
 
-      <div class="grid-2-equal">
+      <div class="grid-2-equal access-chart-row">
         <div class="chart-card">
           <div id="vis7"></div>
         </div>
@@ -108,34 +174,33 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section brt-section">
       <h2>BRT Sunway as a local connector</h2>
       <p class="section-intro">
-        BRT Sunway is smaller than the main rail lines, but it plays a focused role
-        around Sunway and USJ.
+        BRT Sunway is a short local corridor.
+        Its value comes from linking Sunway stops to wider rail interchanges.
       </p>
 
-      <div class="chart-card chart-card-wide">
+      <div class="chart-card chart-card-wide brt-heatmap-card">
         <div id="vis9"></div>
       </div>
 
-      <div class="chart-card" style="margin-top: 24px;">
+      <div class="chart-card chart-card-wide brt-map-card">
         <div id="vis10"></div>
       </div>
     </section>
 
     <section class="section">
       <h2>Final takeaway</h2>
-      <p class="section-intro">
-        The Klang Valley network is not experienced evenly. Access depends on
-        where stations are located, how heavily lines are used, and how long
-        passengers wait.
+      <p class="section-intro final-intro">
+        Klang Valley rail access is uneven. Station location, line demand, waiting time,
+        and local feeder links all shape how accessible the network feels.
       </p>
 
       <div class="metadata">
-        Author: Zhe Dean Gan. Data sources: data.gov.my GTFS Static, Prasarana/MOT
-        ridership data, and processed BRT Sunway OD data. AI assistance used for
-        data preparation, coding guidance, and writing feedback.
+        Author: Zhe Dean Gan. Data sources: data.gov.my GTFS Static,
+        Prasarana/MOT ridership data, and processed BRT Sunway OD data.
+        AI assistance used for data preparation, coding guidance, and writing feedback.
       </div>
     </section>
   </main>
