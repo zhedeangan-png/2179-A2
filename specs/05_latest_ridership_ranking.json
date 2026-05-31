@@ -5,10 +5,10 @@
     "subtitle": "MRT Kajang and LRT Kelana Jaya carry the highest daily ridership."
   },
   "width": 460,
-  "height": 330,
+  "height": 385,
   "padding": {
     "left": 5,
-    "right": 35,
+    "right": 45,
     "top": 5,
     "bottom": 5
   },
@@ -39,34 +39,31 @@
         "y": {
           "field": "line",
           "type": "nominal",
-          "sort": "-x",
+          "sort": [
+            "MRT Kajang",
+            "LRT Kelana Jaya",
+            "LRT Ampang/Sri Petaling",
+            "MRT Putrajaya",
+            "KL Monorail",
+            "BRT Sunway"
+          ],
           "title": null,
           "axis": {
             "labelLimit": 150
           }
         },
         "color": {
-          "field": "line",
-          "type": "nominal",
-          "scale": {
-            "domain": [
-              "LRT Ampang/Sri Petaling",
-              "LRT Kelana Jaya",
-              "MRT Kajang",
-              "MRT Putrajaya",
-              "KL Monorail",
-              "BRT Sunway"
-            ],
-            "range": [
-              "#E69F00",
-              "#0072B2",
-              "#009E73",
-              "#CC79A7",
-              "#6A3D9A",
-              "#56B4E9"
-            ]
-          },
-          "legend": null
+          "condition": [
+            {
+              "test": "datum.line === 'MRT Kajang'",
+              "value": "#8C564B"
+            },
+            {
+              "test": "datum.line === 'LRT Kelana Jaya'",
+              "value": "#0072B2"
+            }
+          ],
+          "value": "#CBD5E1"
         },
         "tooltip": [
           {
@@ -95,8 +92,7 @@
         "baseline": "middle",
         "dx": 5,
         "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#334155"
+        "fontWeight": "bold"
       },
       "encoding": {
         "x": {
@@ -106,12 +102,79 @@
         "y": {
           "field": "line",
           "type": "nominal",
-          "sort": "-x"
+          "sort": [
+            "MRT Kajang",
+            "LRT Kelana Jaya",
+            "LRT Ampang/Sri Petaling",
+            "MRT Putrajaya",
+            "KL Monorail",
+            "BRT Sunway"
+          ]
         },
         "text": {
           "field": "avg_daily_ridership",
           "type": "quantitative",
           "format": "~s"
+        },
+        "color": {
+          "condition": [
+            {
+              "test": "datum.line === 'MRT Kajang' || datum.line === 'LRT Kelana Jaya'",
+              "value": "#1f2937"
+            }
+          ],
+          "value": "#64748b"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "line": "MRT Kajang",
+            "avg_daily_ridership": 270686,
+            "note": "Highest average ridership"
+          },
+          {
+            "line": "LRT Kelana Jaya",
+            "avg_daily_ridership": 259802,
+            "note": "Close second"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "calculate": "datum.avg_daily_ridership / 2",
+          "as": "midpoint"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#ffffff"
+      },
+      "encoding": {
+        "x": {
+          "field": "midpoint",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "line",
+          "type": "nominal",
+          "sort": [
+            "MRT Kajang",
+            "LRT Kelana Jaya",
+            "LRT Ampang/Sri Petaling",
+            "MRT Putrajaya",
+            "KL Monorail",
+            "BRT Sunway"
+          ]
+        },
+        "text": {
+          "field": "note"
         }
       }
     }
@@ -132,7 +195,9 @@
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#334155",
-      "gridColor": "#e5e7eb"
+      "gridColor": "#e5e7eb",
+      "domainColor": "#94a3b8",
+      "tickColor": "#94a3b8"
     },
     "view": {
       "stroke": null
