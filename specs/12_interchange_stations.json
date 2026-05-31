@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Interchange stations by connected line",
-    "subtitle": "Each dot shows a line that connects at the station."
+    "text": "Central stations connect the most lines",
+    "subtitle": "Each dot shows a line available at an interchange station."
   },
   "width": 460,
   "height": 390,
@@ -226,7 +226,7 @@
         "type": "circle",
         "size": 85,
         "filled": true,
-        "color": "#009E73",
+        "color": "#8C564B",
         "stroke": "white",
         "strokeWidth": 0.8
       },
