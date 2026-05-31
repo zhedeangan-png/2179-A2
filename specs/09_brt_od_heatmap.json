@@ -1,17 +1,34 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "BRT Sunway origin-destination ridership in 2026",
-  "width": 760,
+  "title": {
+    "text": "BRT Sunway flows concentrate around USJ 7",
+    "subtitle": "The heatmap shows the full origin-destination pattern across BRT stops."
+  },
+  "width": 980,
   "height": 430,
   "padding": {
     "left": 20,
     "right": 30,
     "top": 10,
-    "bottom": 95
+    "bottom": 55
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
   },
   "data": {
     "url": "data/brt_od_matrix_2026.csv"
   },
+  "transform": [
+    {
+      "calculate": "datum.origin_stop === 'South Quay-USJ 1' ? 'South Quay' : datum.origin_stop === 'Sunway-Setia Jaya' ? 'Setia Jaya' : datum.origin_stop",
+      "as": "origin_short"
+    },
+    {
+      "calculate": "datum.destination_stop === 'South Quay-USJ 1' ? 'South Quay' : datum.destination_stop === 'Sunway-Setia Jaya' ? 'Setia Jaya' : datum.destination_stop",
+      "as": "destination_short"
+    }
+  ],
   "mark": {
     "type": "rect",
     "stroke": "white",
@@ -19,23 +36,41 @@
   },
   "encoding": {
     "x": {
-      "field": "destination_stop",
+      "field": "destination_short",
       "type": "nominal",
       "title": "Destination",
+      "sort": [
+        "Mentari",
+        "South Quay",
+        "SunMed",
+        "SunU-Monash",
+        "Sunway Lagoon",
+        "Setia Jaya",
+        "USJ 7"
+      ],
       "axis": {
         "labelAngle": -30,
         "labelFontSize": 10,
-        "labelLimit": 130,
+        "labelLimit": 120,
         "labelPadding": 8
       }
     },
     "y": {
-      "field": "origin_stop",
+      "field": "origin_short",
       "type": "nominal",
       "title": "Origin",
+      "sort": [
+        "Mentari",
+        "South Quay",
+        "SunMed",
+        "SunU-Monash",
+        "Sunway Lagoon",
+        "Setia Jaya",
+        "USJ 7"
+      ],
       "axis": {
         "labelFontSize": 10,
-        "labelLimit": 160
+        "labelLimit": 130
       }
     },
     "color": {
@@ -44,6 +79,13 @@
       "title": "Total riders",
       "scale": {
         "scheme": "blues"
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "gradientLength": 190,
+        "gradientThickness": 14,
+        "offset": 2
       }
     },
     "tooltip": [
@@ -78,7 +120,10 @@
       "fontSize": 18,
       "fontWeight": 700,
       "anchor": "start",
-      "color": "#1f2937"
+      "color": "#1f2937",
+      "subtitleFont": "Inter, Arial, sans-serif",
+      "subtitleFontSize": 12,
+      "subtitleColor": "#64748b"
     },
     "axis": {
       "labelFont": "Inter, Arial, sans-serif",
@@ -90,7 +135,8 @@
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
-      "orient": "bottom"
+      "labelFontSize": 10,
+      "titleFontSize": 11
     },
     "view": {
       "stroke": null
