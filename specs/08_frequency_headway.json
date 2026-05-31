@@ -1,7 +1,21 @@
 {
-  "title": "Service frequency by line",
-  "width": 320,
-  "height": 510,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average waiting time by line",
+    "subtitle": "Lower headway usually means shorter waits."
+  },
+  "width": 430,
+  "height": 300,
+  "padding": {
+    "left": 10,
+    "right": 20,
+    "top": 10,
+    "bottom": 35
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
   "data": {
     "url": "data/frequency_summary_by_line.csv"
   },
@@ -18,38 +32,29 @@
     "x": {
       "field": "avg_headway_min",
       "type": "quantitative",
-      "title": "Average headway, minutes"
+      "title": "Average headway, minutes",
+      "axis": {
+        "grid": true,
+        "tickCount": 5
+      }
     },
     "y": {
       "field": "route_long_name",
       "type": "nominal",
       "sort": "x",
-      "title": null
+      "title": null,
+      "axis": {
+        "labelLimit": 160
+      }
     },
     "color": {
-      "field": "route_long_name",
-      "type": "nominal",
-      "scale": {
-        "domain": [
-          "LRT Ampang Line",
-          "LRT Kelana Jaya Line",
-          "LRT Sri Petaling Line",
-          "MRT Kajang Line",
-          "MRT Putrajaya Line",
-          "KL Monorail Line",
-          "BRT Sunway Line"
-        ],
-        "range": [
-          "#E69F00",
-          "#0072B2",
-          "#D55E00",
-          "#009E73",
-          "#CC79A7",
-          "#6A3D9A",
-          "#56B4E9"
-        ]
-      },
-      "legend": null
+      "condition": [
+        {
+          "test": "datum.avg_headway_min <= 5",
+          "value": "#0072B2"
+        }
+      ],
+      "value": "#CBD5E1"
     },
     "tooltip": [
       {
@@ -60,21 +65,23 @@
       {
         "field": "avg_headway_min",
         "type": "quantitative",
-        "title": "Avg headway (min)"
+        "title": "Avg headway (min)",
+        "format": ".1f"
       },
       {
         "field": "min_headway_min",
         "type": "quantitative",
-        "title": "Min headway (min)"
+        "title": "Min headway (min)",
+        "format": ".1f"
       },
       {
         "field": "max_headway_min",
         "type": "quantitative",
-        "title": "Max headway (min)"
+        "title": "Max headway (min)",
+        "format": ".1f"
       }
     ]
   },
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "config": {
     "font": "Inter, Arial, sans-serif",
     "title": {
@@ -82,19 +89,19 @@
       "fontSize": 18,
       "fontWeight": 700,
       "anchor": "start",
-      "color": "#1f2937"
+      "color": "#1f2937",
+      "subtitleFont": "Inter, Arial, sans-serif",
+      "subtitleFontSize": 12,
+      "subtitleColor": "#64748b"
     },
     "axis": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
       "labelColor": "#374151",
       "titleColor": "#374151",
-      "gridColor": "#e5e7eb"
-    },
-    "legend": {
-      "labelFont": "Inter, Arial, sans-serif",
-      "titleFont": "Inter, Arial, sans-serif",
-      "orient": "bottom"
+      "gridColor": "#e5e7eb",
+      "domainColor": "#94a3b8",
+      "tickColor": "#94a3b8"
     },
     "view": {
       "stroke": null
