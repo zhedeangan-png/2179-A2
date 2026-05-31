@@ -1,83 +1,217 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Weekday ridership is higher than weekend ridership",
-  "width": 380,
-  "height": 340,
+  "title": {
+    "text": [
+      "Kuala Lumpur trips are dominated",
+      "by private transport"
+    ],
+    "subtitle": "Mode share shows why rail access alone does not guarantee use."
+  },
+  "width": 430,
+  "height": 250,
   "padding": {
     "left": 10,
-    "right": 45,
+    "right": 20,
     "top": 10,
-    "bottom": 80
+    "bottom": 10
+  },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
   },
   "data": {
-    "url": "data/weekday_weekend_ridership_2026.csv"
-  },
-  "mark": {
-    "type": "bar",
-    "cornerRadiusEnd": 3
-  },
-  "encoding": {
-    "x": {
-      "field": "line",
-      "type": "nominal",
-      "sort": [
-        "LRT Ampang/Sri Petaling",
-        "LRT Kelana Jaya",
-        "MRT Kajang",
-        "MRT Putrajaya",
-        "KL Monorail",
-        "BRT Sunway"
-      ],
-      "title": null,
-      "axis": {
-        "labelAngle": -25,
-        "labelFontSize": 10,
-        "labelPadding": 8,
-        "labelLimit": 150
-      }
-    },
-    "xOffset": {
-      "field": "day_type"
-    },
-    "y": {
-      "field": "avg_ridership",
-      "type": "quantitative",
-      "title": "Average ridership"
-    },
-    "color": {
-      "field": "day_type",
-      "type": "nominal",
-      "scale": {
-        "domain": [
-          "Weekday",
-          "Weekend"
-        ],
-        "range": [
-          "#0072B2",
-          "#999999"
-        ]
-      },
-      "title": "Day type"
-    },
-    "tooltip": [
+    "values": [
       {
-        "field": "line",
-        "type": "nominal",
-        "title": "Line"
+        "mode": "Walking and cycling",
+        "share": 13,
+        "display_share": 13,
+        "order": 1
       },
       {
-        "field": "day_type",
-        "type": "nominal",
-        "title": "Day type"
+        "mode": "Private transport",
+        "share": 83,
+        "display_share": 81,
+        "order": 2
       },
       {
-        "field": "avg_ridership",
-        "type": "quantitative",
-        "title": "Avg riders",
-        "format": ","
+        "mode": "Public transport",
+        "share": 4,
+        "display_share": 6,
+        "order": 3
       }
     ]
   },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "height": 72
+      },
+      "encoding": {
+        "x": {
+          "field": "display_share",
+          "type": "quantitative",
+          "stack": "normalize",
+          "axis": null
+        },
+        "y": {
+          "value": 105
+        },
+        "order": {
+          "field": "order",
+          "type": "ordinal"
+        },
+        "color": {
+          "field": "mode",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Walking and cycling",
+              "Private transport",
+              "Public transport"
+            ],
+            "range": [
+              "#22D3EE",
+              "#77AE9E",
+              "#5A8FCD"
+            ]
+          },
+          "legend": {
+            "title": null,
+            "orient": "bottom",
+            "direction": "horizontal",
+            "symbolType": "square",
+            "labelFontSize": 11,
+            "offset": 10
+          }
+        },
+        "tooltip": [
+          {
+            "field": "mode",
+            "type": "nominal",
+            "title": "Mode"
+          },
+          {
+            "field": "share",
+            "type": "quantitative",
+            "title": "Actual share of trips (%)"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 0.065,
+            "label": "13%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#0f172a"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "value": 105
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 0.535,
+            "label": "83%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#0f172a"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "value": 105
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 0.97,
+            "label": "4%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#0f172a"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              1
+            ]
+          },
+          "axis": null
+        },
+        "y": {
+          "value": 105
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ],
   "config": {
     "font": "Inter, Arial, sans-serif",
     "title": {
@@ -85,19 +219,15 @@
       "fontSize": 18,
       "fontWeight": 700,
       "anchor": "start",
-      "color": "#1f2937"
-    },
-    "axis": {
-      "labelFont": "Inter, Arial, sans-serif",
-      "titleFont": "Inter, Arial, sans-serif",
-      "labelColor": "#374151",
-      "titleColor": "#374151",
-      "gridColor": "#e5e7eb"
+      "color": "#1f2937",
+      "subtitleFont": "Inter, Arial, sans-serif",
+      "subtitleFontSize": 12,
+      "subtitleColor": "#64748b"
     },
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
-      "orient": "bottom"
+      "labelColor": "#334155"
     },
     "view": {
       "stroke": null
