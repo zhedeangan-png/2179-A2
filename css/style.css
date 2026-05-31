@@ -49,6 +49,12 @@ h1 {
   margin: 0;
 }
 
+.note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .section {
   margin: 28px 0;
   padding: 28px;
@@ -68,7 +74,18 @@ h1 {
 .section-intro {
   margin: 0 0 22px;
   color: var(--muted);
-  max-width: 760px;
+  max-width: 560px;
+}
+
+.final-intro {
+  max-width: 720px;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
 .grid-2 {
@@ -93,26 +110,167 @@ h1 {
   overflow: hidden;
 }
 
-.map-card {
-  margin-bottom: 24px;
+.chart-card-wide {
+  width: 100%;
 }
 
-.map-support-row {
-  margin-top: 0;
+.chart-card-wide .vega-embed,
+.chart-card-wide .vega-embed > svg {
+  width: 100%;
 }
 
-.map-explanation {
-  align-self: stretch;
-  margin-top: 0;
+.map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+.map-layout .chart-card {
+  min-width: 0;
+}
+
+.map-card-large {
+  position: relative;
+  padding: 10px 20px 10px;
+}
+
+.map-card-large > div {
+  width: 100%;
+}
+
+.map-card-large .vega-embed,
+.map-card-large .vega-embed > svg {
+  width: 100%;
+}
+
+/* Move Vega select control to top-right beside title */
+.map-card-large .vega-bindings {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  margin: 0;
+  z-index: 5;
+}
+
+.map-card-large .vega-bindings .vega-bind {
+  margin: 0;
+}
+
+.map-card-large .vega-bindings label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  background: #ffffff;
+  padding: 2px 0;
+}
+
+.map-card-large .vega-bindings select {
+  font-size: 14px;
+  color: #1f2937;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 2px 8px;
+  background: #ffffff;
+  min-width: 125px;
+}
+
+.map-side {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 28px;
+  height: 100%;
+}
+
+.map-insight,
+.map-read-box,
+.manual-legend {
+  background: #eef6ff;
+  border-left: 5px solid var(--accent);
+  border-radius: 14px;
+  padding: 18px 20px;
+  color: #18324a;
+}
+
+.map-read-box {
+  background: #f1f8ff;
+}
+
+.manual-legend {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  height: 100%;
+}
+
+.map-insight h3,
+.map-read-box h3,
+.manual-legend h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #102a43;
+}
+
+.map-insight p,
+.map-read-box p {
+  margin: 0 0 14px 0;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.map-insight p:last-child,
+.map-read-box p:last-child {
+  margin-bottom: 0;
+}
+
+.legend-item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  font-size: 13px;
+  line-height: 1.25;
+  color: #0f172a;
 }
 
-.note {
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: 0.95rem;
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: 0 0 10px;
+  border: 1px solid #ffffff;
+}
+
+.legend-dot.ampang {
+  background: #E69F00;
+}
+
+.legend-dot.kelana {
+  background: #0072B2;
+}
+
+.legend-dot.sri-petaling {
+  background: #D55E00;
+}
+
+.legend-dot.kajang {
+  background: #8C564B;
+}
+
+.legend-dot.putrajaya {
+  background: #CC79A7;
+}
+
+.legend-dot.monorail {
+  background: #6A3D9A;
+}
+
+.legend-dot.brt {
+  background: #56B4E9;
 }
 
 .callout {
@@ -122,6 +280,7 @@ h1 {
   border-radius: 12px;
   margin-top: 18px;
   color: #334155;
+  max-width: 520px;
 }
 
 .metadata {
@@ -134,6 +293,100 @@ h1 {
   font-weight: 600;
 }
 
+.equal-chart-row {
+  align-items: stretch;
+}
+
+.equal-chart-row > .chart-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.equal-chart-row > .chart-card > div {
+  width: 100%;
+}
+
+.insight-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 18px;
+}
+
+.insight-row .callout {
+  margin-top: 0;
+  max-width: none;
+}
+
+.equal-chart-row .chart-card {
+  justify-content: flex-start;
+}
+
+.equal-chart-row .vega-embed {
+  width: 100%;
+}
+
+.chart-card.compact-chart {
+  padding-bottom: 10px;
+}
+
+.access-chart-row {
+  align-items: stretch;
+}
+
+.access-chart-row > .chart-card {
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.access-chart-row > .chart-card > div {
+  width: 100%;
+}
+
+/* BRT final section polish */
+.brt-section .section-intro {
+  max-width: 650px;
+}
+
+.brt-heatmap-card {
+  padding: 16px 18px 6px;
+}
+
+.brt-map-card {
+  margin-top: 20px;
+  padding: 16px 18px 4px;
+}
+
+.brt-map-card .vega-embed,
+.brt-map-card .vega-embed > svg,
+.brt-heatmap-card .vega-embed,
+.brt-heatmap-card .vega-embed > svg {
+  width: 100%;
+}
+
+@media (max-width: 950px) {
+  .map-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .map-side {
+    grid-template-rows: auto;
+    height: auto;
+  }
+
+  .manual-legend {
+    height: auto;
+  }
+
+  .map-card-large .vega-bindings {
+    position: static;
+    margin-top: 10px;
+  }
+}
+
 @media (max-width: 850px) {
 
   .grid-2,
@@ -144,5 +397,9 @@ h1 {
   .hero,
   .section {
     padding: 22px;
+  }
+
+  .insight-row {
+    grid-template-columns: 1fr;
   }
 }
