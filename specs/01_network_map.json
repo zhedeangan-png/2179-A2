@@ -2,10 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Where are the stations?",
-    "subtitle": "Station locations by line, with Klang Valley district outlines."
+    "subtitle": "Stations by line and district outlines."
   },
-  "width": 460,
-  "height": 420,
+  "width": 680,
+  "height": 620,
   "padding": {
     "left": 5,
     "right": 5,
@@ -18,8 +18,11 @@
   },
   "projection": {
     "type": "mercator",
-    "center": [101.66, 3.08],
-    "scale": 70000
+    "center": [
+      101.665,
+      3.08
+    ],
+    "scale": 94000
   },
   "params": [
     {
@@ -27,7 +30,7 @@
       "value": "All lines",
       "bind": {
         "input": "select",
-        "name": "Highlight line: ",
+        "name": "Line:",
         "options": [
           "All lines",
           "LRT Ampang Line",
@@ -55,7 +58,7 @@
         "filled": true,
         "fill": "#f8fafc",
         "stroke": "#94a3b8",
-        "strokeWidth": 1.1,
+        "strokeWidth": 1,
         "opacity": 1
       },
       "encoding": {
@@ -76,8 +79,8 @@
         "type": "geoshape",
         "filled": false,
         "stroke": "#d6dee8",
-        "strokeWidth": 1.7,
-        "opacity": 0.85
+        "strokeWidth": 1.5,
+        "opacity": 0.75
       }
     },
     {
@@ -102,7 +105,7 @@
         "type": "circle",
         "filled": true,
         "stroke": "white",
-        "strokeWidth": 0.7
+        "strokeWidth": 1.4
       },
       "encoding": {
         "longitude": {
@@ -116,21 +119,22 @@
         "size": {
           "condition": {
             "test": "datum.highlight_status == 'Selected'",
-            "value": 68
+            "value": 72
           },
-          "value": 18
+          "value": 22
         },
         "opacity": {
           "condition": {
             "test": "datum.highlight_status == 'Selected'",
             "value": 1
           },
-          "value": 0.12
+          "value": 0.16
         },
         "color": {
           "field": "line_fixed",
           "type": "nominal",
           "title": "Line",
+          "legend": null,
           "scale": {
             "domain": [
               "LRT Ampang Line",
@@ -145,7 +149,7 @@
               "#E69F00",
               "#0072B2",
               "#D55E00",
-              "#009E73",
+              "#8C564B",
               "#CC79A7",
               "#6A3D9A",
               "#56B4E9"
@@ -174,11 +178,41 @@
     {
       "data": {
         "values": [
-          { "label": "Petaling", "lon": 101.575, "lat": 3.125, "dx": -28, "dy": -6 },
-          { "label": "Central KL", "lon": 101.67, "lat": 3.157, "dx": 10, "dy": -12 },
-          { "label": "Sunway", "lon": 101.627, "lat": 3.066, "dx": 6, "dy": -8 },
-          { "label": "Kajang", "lon": 101.770, "lat": 2.993, "dx": 8, "dy": 4 },
-          { "label": "Sepang", "lon": 101.715, "lat": 2.935, "dx": -18, "dy": 8 }
+          {
+            "label": "Petaling",
+            "lon": 101.575,
+            "lat": 3.125,
+            "dx": -28,
+            "dy": -6
+          },
+          {
+            "label": "Central KL",
+            "lon": 101.67,
+            "lat": 3.157,
+            "dx": 10,
+            "dy": -12
+          },
+          {
+            "label": "Sunway",
+            "lon": 101.627,
+            "lat": 3.066,
+            "dx": 6,
+            "dy": -8
+          },
+          {
+            "label": "Kajang",
+            "lon": 101.77,
+            "lat": 2.993,
+            "dx": 8,
+            "dy": 4
+          },
+          {
+            "label": "Sepang",
+            "lon": 101.715,
+            "lat": 2.935,
+            "dx": -18,
+            "dy": 8
+          }
         ]
       },
       "mark": {
@@ -218,18 +252,11 @@
       "fontSize": 18,
       "fontWeight": 700,
       "anchor": "start",
+      "offset": 0,
       "color": "#1f2937",
       "subtitleFont": "Inter, Arial, sans-serif",
       "subtitleFontSize": 12,
       "subtitleColor": "#64748b"
-    },
-    "legend": {
-      "orient": "bottom",
-      "columns": 2,
-      "labelFont": "Inter, Arial, sans-serif",
-      "titleFont": "Inter, Arial, sans-serif",
-      "labelFontSize": 10,
-      "titleFontSize": 11
     },
     "view": {
       "stroke": null
