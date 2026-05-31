@@ -5,7 +5,7 @@
     "subtitle": "Longer bars indicate wider station coverage."
   },
   "width": 460,
-  "height": 330,
+  "height": 390,
   "padding": {
     "left": 5,
     "right": 25,
@@ -61,7 +61,7 @@
               "#E69F00",
               "#0072B2",
               "#D55E00",
-              "#009E73",
+              "#8C564B",
               "#CC79A7",
               "#6A3D9A",
               "#56B4E9"
