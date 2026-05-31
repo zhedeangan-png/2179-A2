@@ -1,70 +1,347 @@
 {
-  "title": "Monthly average daily ridership by line",
-  "width": 760,
-  "height": 380,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "data/line_ridership_monthly.csv"
   },
-  "mark": {
-    "type": "line",
-    "point": false,
-    "strokeWidth": 2.5
+  "padding": {
+    "left": 5,
+    "right": 30,
+    "top": 5,
+    "bottom": 5
   },
-  "encoding": {
-    "x": {
-      "field": "year_month",
-      "type": "temporal",
-      "title": "Month"
+  "vconcat": [
+    {
+      "title": {
+        "text": "Monthly average daily ridership by line",
+        "subtitle": "Drag the lower chart to focus. Double-click it to reset."
+      },
+      "width": 980,
+      "height": 390,
+      "encoding": {
+        "x": {
+          "field": "year_month",
+          "type": "temporal",
+          "title": "Year",
+          "scale": {
+            "domain": {
+              "param": "time_brush"
+            }
+          },
+          "axis": {
+            "format": "%Y",
+            "tickCount": {
+              "interval": "year",
+              "step": 1
+            },
+            "labelAngle": 0,
+            "labelFlush": false
+          }
+        },
+        "y": {
+          "field": "avg_daily_ridership",
+          "type": "quantitative",
+          "title": "Average daily ridership",
+          "axis": {
+            "format": ",.0f",
+            "tickCount": 7
+          },
+          "scale": {
+            "zero": true,
+            "nice": true
+          }
+        },
+        "color": {
+          "field": "line",
+          "type": "nominal",
+          "title": "Line",
+          "scale": {
+            "domain": [
+              "LRT Ampang/Sri Petaling",
+              "LRT Kelana Jaya",
+              "MRT Kajang",
+              "MRT Putrajaya",
+              "KL Monorail",
+              "BRT Sunway"
+            ],
+            "range": [
+              "#E69F00",
+              "#0072B2",
+              "#8C564B",
+              "#CC79A7",
+              "#6A3D9A",
+              "#56B4E9"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 3,
+            "symbolSize": 110,
+            "labelFontSize": 12,
+            "titleFontSize": 12
+          }
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "line",
+            "strokeWidth": 2.5
+          }
+        },
+        {
+          "mark": {
+            "type": "point",
+            "filled": true,
+            "size": 120,
+            "opacity": 0
+          },
+          "encoding": {
+            "tooltip": [
+              {
+                "field": "year_month",
+                "type": "temporal",
+                "title": "Month",
+                "format": "%b %Y"
+              },
+              {
+                "field": "line",
+                "type": "nominal",
+                "title": "Line"
+              },
+              {
+                "field": "avg_daily_ridership",
+                "type": "quantitative",
+                "title": "Average daily riders",
+                "format": ",.0f"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "year_month": "2020-03-01"
+              }
+            ]
+          },
+          "mark": {
+            "type": "rule",
+            "strokeDash": [4, 4],
+            "strokeWidth": 2,
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "year_month",
+              "type": "temporal"
+            },
+            "color": {
+              "value": "#111827"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "start_month": "2020-04-01",
+                "start_ridership": 232000,
+                "end_month": "2020-04-01",
+                "end_ridership": 25000
+              }
+            ]
+          },
+          "mark": {
+            "type": "rule",
+            "strokeWidth": 2,
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "start_month",
+              "type": "temporal"
+            },
+            "y": {
+              "field": "start_ridership",
+              "type": "quantitative"
+            },
+            "x2": {
+              "field": "end_month"
+            },
+            "y2": {
+              "field": "end_ridership"
+            },
+            "color": {
+              "value": "#111827"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "year_month": "2020-04-01",
+                "avg_daily_ridership": 25000
+              }
+            ]
+          },
+          "mark": {
+            "type": "point",
+            "filled": true,
+            "size": 55,
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "year_month",
+              "type": "temporal"
+            },
+            "y": {
+              "field": "avg_daily_ridership",
+              "type": "quantitative"
+            },
+            "color": {
+              "value": "#111827"
+            }
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "year_month": "2020-04-01",
+                "avg_daily_ridership": 255000,
+                "label": "COVID-19 pandemic"
+              },
+              {
+                "year_month": "2020-04-01",
+                "avg_daily_ridership": 240000,
+                "label": "caused a sharp ridership drop"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "middle",
+            "dx": 10,
+            "fontSize": 12,
+            "fontWeight": "bold",
+            "clip": true
+          },
+          "encoding": {
+            "x": {
+              "field": "year_month",
+              "type": "temporal"
+            },
+            "y": {
+              "field": "avg_daily_ridership",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "label"
+            },
+            "color": {
+              "value": "#111827"
+            }
+          }
+        }
+      ]
     },
-    "y": {
-      "field": "avg_daily_ridership",
-      "type": "quantitative",
-      "title": "Average daily ridership"
-    },
-    "color": {
-      "field": "line",
-      "type": "nominal",
-      "scale": {
-        "domain": [
-          "LRT Ampang/Sri Petaling",
-          "LRT Kelana Jaya",
-          "MRT Kajang",
-          "MRT Putrajaya",
-          "KL Monorail",
-          "BRT Sunway"
-        ],
-        "range": [
-          "#E69F00",
-          "#0072B2",
-          "#009E73",
-          "#CC79A7",
-          "#6A3D9A",
-          "#56B4E9"
+    {
+      "title": {
+        "text": "Time filter",
+        "subtitle": "Drag to filter. Double-click to reset."
+      },
+      "width": 980,
+      "height": 80,
+      "params": [
+        {
+          "name": "time_brush",
+          "select": {
+            "type": "interval",
+            "encodings": ["x"],
+            "clear": "dblclick"
+          }
+        }
+      ],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 1.2,
+        "opacity": 0.75
+      },
+      "encoding": {
+        "x": {
+          "field": "year_month",
+          "type": "temporal",
+          "title": null,
+          "axis": {
+            "format": "%Y",
+            "tickCount": {
+              "interval": "year",
+              "step": 1
+            },
+            "labelAngle": 0,
+            "labelFlush": false
+          }
+        },
+        "y": {
+          "field": "avg_daily_ridership",
+          "type": "quantitative",
+          "title": null,
+          "axis": {
+            "tickCount": 3,
+            "grid": false,
+            "format": ",.0f"
+          }
+        },
+        "color": {
+          "field": "line",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "LRT Ampang/Sri Petaling",
+              "LRT Kelana Jaya",
+              "MRT Kajang",
+              "MRT Putrajaya",
+              "KL Monorail",
+              "BRT Sunway"
+            ],
+            "range": [
+              "#E69F00",
+              "#0072B2",
+              "#8C564B",
+              "#CC79A7",
+              "#6A3D9A",
+              "#56B4E9"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year_month",
+            "type": "temporal",
+            "title": "Month",
+            "format": "%b %Y"
+          },
+          {
+            "field": "line",
+            "type": "nominal",
+            "title": "Line"
+          },
+          {
+            "field": "avg_daily_ridership",
+            "type": "quantitative",
+            "title": "Average daily riders",
+            "format": ",.0f"
+          }
         ]
-      },
-      "title": "Line"
-    },
-    "tooltip": [
-      {
-        "field": "year_month",
-        "type": "temporal",
-        "title": "Month",
-        "format": "%b %Y"
-      },
-      {
-        "field": "line",
-        "type": "nominal",
-        "title": "Line"
-      },
-      {
-        "field": "avg_daily_ridership",
-        "type": "quantitative",
-        "title": "Avg daily riders",
-        "format": ","
       }
-    ]
-  },
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    }
+  ],
   "config": {
     "font": "Inter, Arial, sans-serif",
     "title": {
@@ -72,7 +349,10 @@
       "fontSize": 18,
       "fontWeight": 700,
       "anchor": "start",
-      "color": "#1f2937"
+      "color": "#1f2937",
+      "subtitleFont": "Inter, Arial, sans-serif",
+      "subtitleFontSize": 12,
+      "subtitleColor": "#64748b"
     },
     "axis": {
       "labelFont": "Inter, Arial, sans-serif",
@@ -84,7 +364,11 @@
     "legend": {
       "labelFont": "Inter, Arial, sans-serif",
       "titleFont": "Inter, Arial, sans-serif",
-      "orient": "bottom"
+      "orient": "bottom",
+      "direction": "horizontal",
+      "symbolSize": 110,
+      "labelFontSize": 12,
+      "titleFontSize": 12
     },
     "view": {
       "stroke": null
